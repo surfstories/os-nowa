@@ -41,6 +41,7 @@ Onboarding is not finished until all four of these are true — check them, do n
 3. **At least one domain folder exists** with both an `index.md` and a `log.md`, and the index has at
    least one row worth choosing from.
 4. `decisions.md` holds **at least one** entry.
+5. `tasks.md` holds one open item, or Step 6b established there was genuinely nothing open.
 
 If any is false, onboarding stopped early. Say so plainly and offer to finish it, rather than
 declaring it done.

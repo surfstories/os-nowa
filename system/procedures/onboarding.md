@@ -195,6 +195,26 @@ only thing they cannot reconstruct.
 
 **📌 Fire the Decider card.**
 
+## Step 6b — Leave one thing waiting
+
+Short, and do not skip it. **By now they have almost certainly mentioned something that is actually
+open** — someone they owe an answer to, a thing they keep meaning to sort out, a deadline. Go back
+through what they told you and pick the most concrete one.
+
+> *"One last thing. You mentioned <the open thing> — shall I put that on your list so it's waiting
+> for you next time?"* `1)` yes · `2)` no, leave it empty
+
+On yes, add one line to `tasks.md`. One. Do not build them a task list — take the single most real
+item and stop.
+
+**Why this step exists.** Onboarding otherwise ends with a workspace that is finished and idle, and
+"come back tomorrow" is then an appeal to discipline. One open item turns the return into picking
+something up rather than starting again. It is also the fourth loop this system advertises, and
+without this step onboarding demonstrates only three of them.
+
+If nothing genuinely open came up, say so and move on — an invented task is worse than an empty
+list, because the first thing they see next time is something they never asked for.
+
 ## Step 7 — Check your own work
 
 Before celebrating, verify all four, by actually looking:
@@ -204,6 +224,9 @@ Before celebrating, verify all four, by actually looking:
 3. **One domain folder** exists, with `index.md`, `log.md`, and at least one real page — and the
    index has a row pointing at that page.
 4. `decisions.md` holds **at least one** entry.
+5. `tasks.md` holds **one** open item — unless nothing genuinely open came up in Step 6b, which is a
+   legitimate outcome. If you skipped it because you forgot rather than because there was nothing,
+   go back and do it.
 
 Also check that no `{{` placeholder survives anywhere, and that the three `me/` files together are
 under about 150 lines.
