@@ -64,13 +64,18 @@ OS_Nowa — это папка с текстовыми файлами, устро
 
 ### Честные границы
 
-- **Проверено** в Claude Code — установка и настройка пройдены целиком.
-- **Файлы системы работают в любом агенте**, потому что это просто markdown: `AGENTS.md` читают и
-  Codex, и Cursor, и Gemini.
-- **Но команды, которые вы создадите сами, работают только в Claude Code.** Шесть встроенных команд
-  выше — это правила в `AGENTS.md` и `system/`, они работают везде. А новая команда, созданная через
-  `create-skill`, — это файл в `.claude/skills/`, который читает только Claude Code. Если вы
-  откроете папку другим агентом, ваши собственные команды не сработают. Всё остальное — сработает.
+- **Проверено** в Claude Code — установка и настройка проходят целиком, от вставки команды до
+  готового рабочего пространства.
+- **Структура и правила переносятся в другие агенты.** Здесь всё — обычный markdown, а `AGENTS.md` —
+  файл, который кодовые агенты читают по общему соглашению. Измерено в **Codex** (v0.146.0): новая
+  сессия на вопрос «на чём мне сегодня сосредоточиться» сама открыла три файла в `me/` и ответила по
+  ним — три запуска из трёх. **Cursor и Gemini следуют тому же соглашению, но не проверялись** —
+  считайте это вероятным, а не доказанным.
+- **Команды работают только в Claude Code, кроме одной.** `onboard` — это письменная процедура в
+  `system/`, ей может следовать любой агент. `explain`, `os-health`, `level-up`, `create-skill` и
+  `backtrack` — файлы в `.claude/skills/`, которые читает только Claude Code; то же касается и
+  команд, которые вы создадите сами. Откройте эту папку другим агентом — он всё равно будет знать,
+  кто вы, над чем вы работаете и куда что класть. Но этих пяти команд у него не будет.
 - **Никаких интеграций в этой версии.** Ни почты, ни календаря, ни облака. Только папка с текстом.
 
 ---
@@ -105,13 +110,18 @@ skeleton.
 
 ### Honest boundaries
 
-- **Tested** in Claude Code — install and setup run end to end.
-- **The system's files work in any agent**, because they are just markdown: `AGENTS.md` is read by
-  Codex, Cursor and Gemini alike.
-- **But skills you create yourself are Claude Code only.** The six commands above are rules living in
-  `AGENTS.md` and `system/`, and they work anywhere. A new command made with `create-skill` is a file
-  in `.claude/skills/`, which only Claude Code reads. Open the folder in a different agent and your
-  own commands will not fire. Everything else will.
+- **Tested** in Claude Code — install and setup run end to end, from a cold paste to a finished
+  workspace.
+- **The structure and the rules travel to other agents.** Everything here is plain markdown, and
+  `AGENTS.md` is the file coding agents read by convention. Measured in **Codex** (v0.146.0): a fresh
+  session asked "what should I focus on today" opened the three `me/` files on its own and answered
+  from them, three runs out of three. **Cursor and Gemini follow the same convention but have not been
+  measured** — treat them as likely, not proven.
+- **The commands are Claude Code only, with one exception.** `onboard` is a written procedure in
+  `system/`, so any agent can follow it. `explain`, `os-health`, `level-up`, `create-skill` and
+  `backtrack` are files in `.claude/skills/`, which only Claude Code reads — and so is any skill you
+  create yourself. Open this folder in another agent and it will still know who you are, what you are
+  working toward, and how to file things. It will not have those five commands.
 - **No integrations in this version.** No mail, no calendar, no cloud. Just a folder of text.
 
 ---

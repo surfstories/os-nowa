@@ -115,8 +115,14 @@ again. If it genuinely matters later, ask.
 
 **Write `me/profile.md`** from their answers — show them what you are about to write first. Keep it
 under about 30 lines. Remove the line `<!-- filled by onboarding -->` and the *Status: not yet
-filled in* line. **Leave the diagnostic token line in place** — it costs nothing and it is how the
-system can be checked later.
+filled in* line.
+
+**Keep the diagnostic token block whole — both the token and the sentence that explains it.** Copy it
+across intact. Carrying the bare token without its explanation leaves the user approving a file about
+themselves containing an unexplained machine string, which is worse than not having it: the template
+they started with explained itself and their own profile no longer would. If they ask what it is,
+one line — *"a self-test, so you can check the system is loading your files properly; it does nothing
+else and costs nothing."*
 
 **🎒 Fire the Explorer card.** ✅ *Your workspace knows who you are.* 🔓 *Unlocked: I don't have to
 ask again — this loads in every conversation.* ➡️ *Next: what you're working toward.*
@@ -210,14 +216,20 @@ that is still empty** — that is the one failure this whole procedure exists to
 Fire the finale card. Then close with a few tight lines, in their language, and **no menu**:
 
 1. **It's yours.** Everything here is plain text on their own machine. No account, nothing synced.
-2. **It compounds.** Keep working from this folder. Every subject they add, every decision they log,
-   makes the next conversation start further ahead.
-3. **One task, one new conversation.** Fresh chat per thing.
-4. **Three things to remember they can say:**
+2. **How to come back tomorrow — say this concretely, and do not assume they know it.** Tell them the
+   actual folder path, in full, and that the way back in is to open a new session *in that folder*.
+   Give them the literal command if they use a terminal, and say plainly that a conversation started
+   anywhere else will not know who they are — nothing is broken, it simply cannot see this folder.
+   **This is the step that decides whether they ever return.** "Keep working from this folder" means
+   nothing to someone who does not know a session is tied to a directory.
+3. **It compounds.** Every subject they add and every decision they log makes the next conversation
+   start further ahead.
+4. **One task, one new conversation.** Fresh chat per thing.
+5. **Three things to remember they can say:**
    - *"how does this work?"* — any time, about any part of it
    - *"level up"* — once a week, to turn one repeated chore into something automatic
    - *"check my system"* — every few weeks, to catch anything that has drifted
-5. **Back it up.** It is a folder. Putting it somewhere that syncs — or occasionally copying it — is
+6. **Back it up.** It is a folder. Putting it somewhere that syncs — or occasionally copying it — is
    the whole backup strategy. Offer to explain if they want.
 
 End on one encouraging line, in their language.
