@@ -21,6 +21,14 @@ It then offers a fix list. It applies nothing until the user approves each item.
 4. **Re-derive every number with a command this run.** A count copied out of an `index.md` is a
    defect you introduced while looking for defects.
 5. **Be honest, not generous.** "0 findings" is only believable on a small, new workspace.
+6. **Read `me/profile.md` first and report the way that person asked to be spoken to.** It is already
+   in your context and it usually says something like "plain English, no jargon" — and this skill is
+   the one most likely to ignore it. Say what is wrong in their words and why it matters to *them*;
+   put the file path in brackets at the end of the line, or leave it out. Never open with one.
+   Never use `file.md:30` as the subject of a sentence, and never use the failure-mode names —
+   stale facts, bloat, confusion, contradiction — as headings to someone who has not been taught
+   them; they are your categories for thinking, not their vocabulary. Onboarding respects this
+   instruction and a report that ignores it reads as a different, colder product.
 
 ## Steps
 
@@ -47,8 +55,13 @@ scan that silently excludes the least-catalogued folders will always report the 
 **Step 3 — Rank by leverage.** A broken pointer or a contradiction on something the user acts on
 ranks far above a lone orphan page. Report in that order, not check order.
 
-**Step 4 — Report in chat**, grouped by failure mode, each finding with the concrete fix underneath
-it. Then ask, as a numbered menu, which fixes to apply — if any.
+**Step 4 — Report in chat**, most important first, each finding with the concrete fix underneath it.
+Then ask, as a numbered menu, which fixes to apply — if any.
+
+Write each finding as **one plain sentence naming the consequence to them**, then the fix. *"Your
+task list is empty, but you told me the bakery is still waiting on their figures"* — not *"Confusion:
+`tasks.md` has 0 open items."* Group by what it means to them, not by failure mode. Hard rule 6
+governs this step above everything else in it.
 
 **Step 5 — Apply only what was approved**, one at a time, showing each change. Then append one line
 to the affected domain's `log.md`: `## [<date>] fix | os-health: <n> found / <m> fixed`.
