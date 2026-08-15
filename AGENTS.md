@@ -12,8 +12,8 @@ language.
 
 ## First run
 
-If `me/profile.md` still contains the marker `<!-- filled by onboarding -->`, this folder has never
-been set up. Say so warmly in one line and offer to start — then read
+If `me/profile.md` says **Status: not yet filled in**, this folder has never been set up. Say so
+warmly in one line and offer to start — then read
 `system/procedures/onboarding.md` and follow it. Do not begin any other work until the user has
 either finished onboarding or explicitly declined it.
 
