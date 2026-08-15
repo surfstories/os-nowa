@@ -248,10 +248,16 @@ Fire the finale card. Then close with a few tight lines, in their language, and 
 3. **It compounds.** Every subject they add and every decision they log makes the next conversation
    start further ahead.
 4. **One task, one new conversation.** Fresh chat per thing.
-5. **Three things to remember they can say:**
+5. **Three things to remember they can say — and say plainly that ordinary words are how you ask for
+   anything here.** There is nothing to type in a special way, no slash and no menu.
    - *"how does this work?"* — any time, about any part of it
    - *"level up"* — once a week, to turn one repeated chore into something automatic
    - *"check my system"* — every few weeks, to catch anything that has drifted
+
+   **Use these wordings, not the short names.** `explain`, `level-up` and `os-health` also work and
+   are what the README lists, so mention once that the short name does the same thing — but the
+   spoken form is what a non-technical person will remember, and teaching two names for one thing
+   without saying they are the same is how people conclude they have forgotten the right one.
 6. **Back it up.** It is a folder. Putting it somewhere that syncs — or occasionally copying it — is
    the whole backup strategy. Offer to explain if they want.
 

@@ -57,10 +57,16 @@ OS_Nowa — это папка с текстовыми файлами, устро
   читать всё сразу.
 - **Четыре рабочих цикла.** Знания (по темам, с каталогом), задачи (один файл, только открытые),
   проекты (сначала спецификация, потом код) и решения (только дополняется, никогда не переписывается).
-- **Шесть команд:** `onboard` — настройка · `explain` — объяснит, как всё устроено, в любой момент ·
-  `os-health` — проверит, не разъехалось ли что-то · `level-up` — раз в неделю превращает рутину в
-  автоматику · `create-skill` — новая команда · `backtrack` — если агент что-то не нашёл, чинит
-  причину, а не симптом.
+- **Шесть вещей, которые можно попросить.** Просто скажите их обычными словами — ничего не нужно
+  вводить особым образом, никаких слэшей и меню:
+  - *«настрой меня»* — первичная настройка (`onboard`)
+  - *«как это устроено?»* — объяснит любую часть системы, в любой момент (`explain`)
+  - *«проверь систему»* — скажет, не разъехалось ли что-нибудь (`os-health`)
+  - *«level up»* — превращает еженедельную рутину в автоматику (`level-up`)
+  - *«сделай из этого команду»* — создаёт новую такую команду (`create-skill`)
+  - *«почему ты это не нашёл?»* — если что-то не нашлось, чинит причину, а не симптом (`backtrack`)
+
+  Короткое имя в скобках тоже работает, если вам удобнее одно слово.
 
 ### Честные границы
 
@@ -103,10 +109,17 @@ skeleton.
   to read everything to answer something.
 - **Four working loops.** Knowledge (by subject, catalogued), tasks (one file, open items only),
   projects (spec before build) and decisions (append-only, never rewritten).
-- **Six commands:** `onboard` — setup · `explain` — explains how any of this works, at any moment ·
-  `os-health` — checks whether anything has drifted · `level-up` — turns one weekly chore into
-  something automatic · `create-skill` — a new command · `backtrack` — when the agent fails to find
-  something, it fixes the cause rather than the symptom.
+- **Six things you can ask for.** You just say them in ordinary words — there is nothing to type in a
+  special way, no slash, no menu:
+  - *"set me up"* — first-time setup (`onboard`)
+  - *"how does this work?"* — explains any part of it, at any moment (`explain`)
+  - *"check my system"* — tells you whether anything has drifted (`os-health`)
+  - *"level up"* — turns one weekly chore into something automatic (`level-up`)
+  - *"make this a command"* — creates a new one of these (`create-skill`)
+  - *"why didn't you find that?"* — when something was missed, fixes the cause rather than the
+    symptom (`backtrack`)
+
+  The short name in brackets works too, if you prefer typing one word.
 
 ### Honest boundaries
 
