@@ -15,9 +15,10 @@ It then offers a fix list. It applies nothing until the user approves each item.
 
 1. **Read-only by default.** The report is the deliverable. Fixes are a separate, opt-in step.
 2. **One fix at a time, each shown as a before/after** before it is applied. Not a batch.
-3. **Never delete. Move to `_trash/<YYYY-MM-DD>/`.** This workspace is not under version control by
-   default, so a delete is final and there is no undo. This is a deliberate difference from lint
-   tools that live in a git repository, where `git checkout` is always available. Here it is not.
+3. **Never delete. Move to `_trash/<YYYY-MM-DD>/`.** The install leaves a local git history, but the
+   user is not committing to it — so for anything written since setup there is no `git checkout` to
+   fall back on. Treat every delete as final. This is a deliberate difference from lint tools that
+   live in an actively-committed repository.
 4. **Re-derive every number with a command this run.** A count copied out of an `index.md` is a
    defect you introduced while looking for defects.
 5. **Be honest, not generous.** "0 findings" is only believable on a small, new workspace.

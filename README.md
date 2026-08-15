@@ -15,10 +15,16 @@ Set up OS_Nowa for me.
 1. Ask me where to put it. If I don't care, use a folder called "os-nowa" in my home directory.
 2. Get the files into that folder. If git is available:
        git clone https://github.com/surfstories/os-nowa.git os-nowa
+       cd os-nowa && git remote remove origin
+   That second line matters: it disconnects the folder from the original repository, so my
+   workspace is mine and nothing I write is ever sitting on top of someone else's project.
+   Keep the local git history — it is my undo.
    If git is NOT installed, don't try to install it — download the archive instead:
        curl -L https://github.com/surfstories/os-nowa/archive/refs/heads/main.tar.gz -o os-nowa.tar.gz
        tar -xzf os-nowa.tar.gz
    That unpacks a folder named "os-nowa-main". Rename it to "os-nowa" and delete the .tar.gz.
+   Then, if git IS available, run "git init && git add -A && git commit -m 'OS_Nowa'" inside it,
+   so both routes end up the same: my own history, connected to nobody.
    If neither works, tell me plainly what failed and what to try — don't guess.
 3. Make that folder your working directory, read AGENTS.md in it, and start onboarding by
    following system/procedures/onboarding.md.

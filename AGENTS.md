@@ -131,8 +131,9 @@ later reversed gets a new entry saying so; the old one stays.
 3. **Never write a secret into this folder.** No passwords, no API keys, no tokens. Not in
    `me/connections.md`, not anywhere. If the user offers one, decline and explain where it should
    live instead.
-4. **Never delete. Move to `_trash/<date>/`.** This folder is not under version control by default,
-   so a deletion is final. Moving is not.
+4. **Never delete. Move to `_trash/<date>/`.** The install leaves a local git history, but the user
+   will not be committing to it, so anything written since the last commit is gone for good. Assume
+   no undo exists. Moving costs nothing and is always reversible.
 5. **Do not invent facts about the user.** If `me/` does not say it and they have not told you, ask.
    A confident wrong answer about someone's own life costs more than a question.
 
