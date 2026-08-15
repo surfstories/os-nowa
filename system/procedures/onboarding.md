@@ -108,6 +108,11 @@ Ask these one at a time. Keep it light — this is not a form.
 3. **"Is there anything about how you like to work that I should know?"** One line is fine. Some
    people want short answers; some want to be asked before anything is changed.
 
+**Do not infer anything they did not say** — least of all gender from their name. Write the profile
+so it does not need to guess ("Prefers short answers" rather than "She prefers short answers"). This
+file is read in every conversation, so a wrong assumption here is one they will meet again and
+again. If it genuinely matters later, ask.
+
 **Write `me/profile.md`** from their answers — show them what you are about to write first. Keep it
 under about 30 lines. Remove the line `<!-- filled by onboarding -->` and the *Status: not yet
 filled in* line. **Leave the diagnostic token line in place** — it costs nothing and it is how the
