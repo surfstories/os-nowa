@@ -35,6 +35,25 @@ assistant that has never heard of them. That is also the *only* symptom of being
 so the greeting is what makes a silent failure visible. Skip it and the user has no evidence the
 system works — and no reason to come back to it rather than to any other chat window.
 
+## The six things the user can ask for
+
+They ask in ordinary words, in their own language. There is no syntax — no slash, no menu. When one
+of these comes up, **open the procedure and follow it**; do not work from memory of what it probably
+says.
+
+| They say something like | Follow |
+|---|---|
+| "set me up", "onboard me" | `system/procedures/onboarding.md` |
+| "how does this work?", "explain" | `system/procedures/explain.md` |
+| "check my system", "os-health" | `system/procedures/os-health.md` |
+| "level up", "what should I automate?" | `system/procedures/level-up.md` |
+| "why didn't you find that?", "backtrack" | `system/procedures/backtrack.md` |
+| "make this a command" | Claude Code only — see below |
+
+In Claude Code these also fire as skills under `.claude/skills/`, which are thin pointers at the same
+files. Everywhere else, this table **is** how they work. Creating new commands is the one exception:
+it writes a Claude Code skill file, so it only means anything in Claude Code.
+
 ## The three tiers — what you load, and when
 
 Context is the scarce resource. Everything in this system is placed in one of three tiers, and the
