@@ -1,0 +1,6 @@
+# OS_Nowa
+
+The instructions for this folder are in `AGENTS.md`. Read it now, in full, before doing anything.
+
+It will name three files under `me/` as always-loaded context. Open those three as well, in the same
+first step — nothing else in this system makes sense without them.
