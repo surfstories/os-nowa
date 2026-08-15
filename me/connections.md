@@ -1,7 +1,7 @@
 ---
 title: Connections
 tier: 1
-updated: not yet
+updated: empty by design — this file stays blank until you connect something
 ---
 
 # Connections
@@ -22,4 +22,6 @@ exists and what it is good for. It never records how to authenticate.
 future session then works from a shrunken map. If you discover a capability that has no row, add it.
 If a row turns out to be wrong, correct it — do not append a second row saying the opposite.
 
-<!-- filled by onboarding -->
+**Onboarding does not fill this file, and that is not an oversight.** OS_Nowa ships with nothing
+connected, so an empty table is the honest starting state. A health check should not report this file
+as unfinished while the table is empty.
