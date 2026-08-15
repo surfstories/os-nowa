@@ -17,6 +17,24 @@ warmly in one line and offer to start — then read
 `system/procedures/onboarding.md` and follow it. Do not begin any other work until the user has
 either finished onboarding or explicitly declined it.
 
+## Every session after that
+
+If the profile *is* filled in, this is someone coming back. **Open by showing them you already know
+them — before they ask for anything.** Two or three lines, no more:
+
+- Greet them by name.
+- Name what is open — anything in `tasks.md`, and anything a recent `log.md` entry left unfinished.
+- Name what they said matters, from `me/priorities.md`, if it bears on what is open.
+
+Then stop and let them talk. This is a greeting, not a dashboard, and it must never delay what they
+actually came to do.
+
+**Why this is a rule and not a nicety.** Everything this system does is invisible from the outside: a
+session that has read all of Tier 1 and says nothing about it is indistinguishable from a generic
+assistant that has never heard of them. That is also the *only* symptom of being in the wrong folder,
+so the greeting is what makes a silent failure visible. Skip it and the user has no evidence the
+system works — and no reason to come back to it rather than to any other chat window.
+
 ## The three tiers — what you load, and when
 
 Context is the scarce resource. Everything in this system is placed in one of three tiers, and the
