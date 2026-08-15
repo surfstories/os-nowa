@@ -15,10 +15,16 @@ Set up OS_Nowa for me.
 1. Ask me where to put it. If I don't care, use a folder called "os-nowa" in my home directory.
 2. Get the files into that folder. If git is available:
        git clone https://github.com/surfstories/os-nowa.git os-nowa
+       cd os-nowa && git remote remove origin
+   That second line matters: it disconnects the folder from the original repository, so my
+   workspace is mine and nothing I write is ever sitting on top of someone else's project.
+   Keep the local git history — it is my undo.
    If git is NOT installed, don't try to install it — download the archive instead:
        curl -L https://github.com/surfstories/os-nowa/archive/refs/heads/main.tar.gz -o os-nowa.tar.gz
        tar -xzf os-nowa.tar.gz
    That unpacks a folder named "os-nowa-main". Rename it to "os-nowa" and delete the .tar.gz.
+   Then, if git IS available, run "git init && git add -A && git commit -m 'OS_Nowa'" inside it,
+   so both routes end up the same: my own history, connected to nobody.
    If neither works, tell me plainly what failed and what to try — don't guess.
 3. Make that folder your working directory, read AGENTS.md in it, and start onboarding by
    following system/procedures/onboarding.md.
@@ -57,10 +63,16 @@ OS_Nowa — это папка с текстовыми файлами, устро
   читать всё сразу.
 - **Четыре рабочих цикла.** Знания (по темам, с каталогом), задачи (один файл, только открытые),
   проекты (сначала спецификация, потом код) и решения (только дополняется, никогда не переписывается).
-- **Шесть команд:** `onboard` — настройка · `explain` — объяснит, как всё устроено, в любой момент ·
-  `os-health` — проверит, не разъехалось ли что-то · `level-up` — раз в неделю превращает рутину в
-  автоматику · `create-skill` — новая команда · `backtrack` — если агент что-то не нашёл, чинит
-  причину, а не симптом.
+- **Шесть вещей, которые можно попросить.** Просто скажите их обычными словами — ничего не нужно
+  вводить особым образом, никаких слэшей и меню:
+  - *«настрой меня»* — первичная настройка (`onboard`)
+  - *«как это устроено?»* — объяснит любую часть системы, в любой момент (`explain`)
+  - *«проверь систему»* — скажет, не разъехалось ли что-нибудь (`os-health`)
+  - *«level up»* — превращает еженедельную рутину в автоматику (`level-up`)
+  - *«сделай из этого команду»* — создаёт новую такую команду (`create-skill`)
+  - *«почему ты это не нашёл?»* — если что-то не нашлось, чинит причину, а не симптом (`backtrack`)
+
+  Короткое имя в скобках тоже работает, если вам удобнее одно слово.
 
 ### Честные границы
 
@@ -71,11 +83,11 @@ OS_Nowa — это папка с текстовыми файлами, устро
   сессия на вопрос «на чём мне сегодня сосредоточиться» сама открыла три файла в `me/` и ответила по
   ним — три запуска из трёх. **Cursor и Gemini следуют тому же соглашению, но не проверялись** —
   считайте это вероятным, а не доказанным.
-- **Команды работают только в Claude Code, кроме одной.** `onboard` — это письменная процедура в
-  `system/`, ей может следовать любой агент. `explain`, `os-health`, `level-up`, `create-skill` и
-  `backtrack` — файлы в `.claude/skills/`, которые читает только Claude Code; то же касается и
-  команд, которые вы создадите сами. Откройте эту папку другим агентом — он всё равно будет знать,
-  кто вы, над чем вы работаете и куда что класть. Но этих пяти команд у него не будет.
+- **Пять команд из шести работают в любом агенте, одна — нет.** Каждая из них — письменная процедура
+  в `system/procedures/`, на которую `AGENTS.md` указывает любому агенту. Исключение — *«сделай из
+  этого команду»*: она создаёт файл-скилл для Claude Code, поэтому имеет смысл только там, и **любая
+  команда, которую вы создадите сами, тоже работает только в Claude Code.** Всё остальное — кто вы,
+  над чем работаете, четыре рабочих цикла, правила хранения и остальные пять команд — переносится.
 - **Никаких интеграций в этой версии.** Ни почты, ни календаря, ни облака. Только папка с текстом.
 
 ---
@@ -103,10 +115,17 @@ skeleton.
   to read everything to answer something.
 - **Four working loops.** Knowledge (by subject, catalogued), tasks (one file, open items only),
   projects (spec before build) and decisions (append-only, never rewritten).
-- **Six commands:** `onboard` — setup · `explain` — explains how any of this works, at any moment ·
-  `os-health` — checks whether anything has drifted · `level-up` — turns one weekly chore into
-  something automatic · `create-skill` — a new command · `backtrack` — when the agent fails to find
-  something, it fixes the cause rather than the symptom.
+- **Six things you can ask for.** You just say them in ordinary words — there is nothing to type in a
+  special way, no slash, no menu:
+  - *"set me up"* — first-time setup (`onboard`)
+  - *"how does this work?"* — explains any part of it, at any moment (`explain`)
+  - *"check my system"* — tells you whether anything has drifted (`os-health`)
+  - *"level up"* — turns one weekly chore into something automatic (`level-up`)
+  - *"make this a command"* — creates a new one of these (`create-skill`)
+  - *"why didn't you find that?"* — when something was missed, fixes the cause rather than the
+    symptom (`backtrack`)
+
+  The short name in brackets works too, if you prefer typing one word.
 
 ### Honest boundaries
 
@@ -117,11 +136,11 @@ skeleton.
   session asked "what should I focus on today" opened the three `me/` files on its own and answered
   from them, three runs out of three. **Cursor and Gemini follow the same convention but have not been
   measured** — treat them as likely, not proven.
-- **The commands are Claude Code only, with one exception.** `onboard` is a written procedure in
-  `system/`, so any agent can follow it. `explain`, `os-health`, `level-up`, `create-skill` and
-  `backtrack` are files in `.claude/skills/`, which only Claude Code reads — and so is any skill you
-  create yourself. Open this folder in another agent and it will still know who you are, what you are
-  working toward, and how to file things. It will not have those five commands.
+- **Five of the six commands work in any agent; one does not.** Each is a written procedure in
+  `system/procedures/`, which `AGENTS.md` points any agent at. The exception is *"make this a
+  command"* — it writes a Claude Code skill file, so it only means anything in Claude Code, and **any
+  command you create yourself is likewise Claude Code only.** Everything else — who you are, what you
+  are working toward, the four loops, the filing rules and the other five commands — travels.
 - **No integrations in this version.** No mail, no calendar, no cloud. Just a folder of text.
 
 ---

@@ -35,6 +35,25 @@ assistant that has never heard of them. That is also the *only* symptom of being
 so the greeting is what makes a silent failure visible. Skip it and the user has no evidence the
 system works — and no reason to come back to it rather than to any other chat window.
 
+## The six things the user can ask for
+
+They ask in ordinary words, in their own language. There is no syntax — no slash, no menu. When one
+of these comes up, **open the procedure and follow it**; do not work from memory of what it probably
+says.
+
+| They say something like | Follow |
+|---|---|
+| "set me up", "onboard me" | `system/procedures/onboarding.md` |
+| "how does this work?", "explain" | `system/procedures/explain.md` |
+| "check my system", "os-health" | `system/procedures/os-health.md` |
+| "level up", "what should I automate?" | `system/procedures/level-up.md` |
+| "why didn't you find that?", "backtrack" | `system/procedures/backtrack.md` |
+| "make this a command" | Claude Code only — see below |
+
+In Claude Code these also fire as skills under `.claude/skills/`, which are thin pointers at the same
+files. Everywhere else, this table **is** how they work. Creating new commands is the one exception:
+it writes a Claude Code skill file, so it only means anything in Claude Code.
+
 ## The three tiers — what you load, and when
 
 Context is the scarce resource. Everything in this system is placed in one of three tiers, and the
@@ -131,8 +150,9 @@ later reversed gets a new entry saying so; the old one stays.
 3. **Never write a secret into this folder.** No passwords, no API keys, no tokens. Not in
    `me/connections.md`, not anywhere. If the user offers one, decline and explain where it should
    live instead.
-4. **Never delete. Move to `_trash/<date>/`.** This folder is not under version control by default,
-   so a deletion is final. Moving is not.
+4. **Never delete. Move to `_trash/<date>/`.** The install leaves a local git history, but the user
+   will not be committing to it, so anything written since the last commit is gone for good. Assume
+   no undo exists. Moving costs nothing and is always reversible.
 5. **Do not invent facts about the user.** If `me/` does not say it and they have not told you, ask.
    A confident wrong answer about someone's own life costs more than a question.
 

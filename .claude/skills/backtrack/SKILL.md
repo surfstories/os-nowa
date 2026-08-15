@@ -6,70 +6,26 @@ autonomy: 1  # proposes the fix; the user approves before anything is changed
 
 ## What this does
 
-Turns a bad answer into a structural improvement.
+Turns a failed lookup into a structural fix, so the same miss cannot happen twice.
 
-The default response to "I couldn't find it" is to apologise and try harder. That fixes today's
-question and guarantees tomorrow's. This skill does the opposite: it treats the miss as evidence that
-something about the workspace's organisation is wrong, and repairs *that*.
+**The method is in `system/procedures/backtrack.md`. Read it and follow it.**
 
-**Fire it yourself, without being asked, the moment a lookup fails.** Waiting to be corrected wastes
-the most useful part of the signal.
+This file exists only so the skill fires on a spoken trigger. The procedure itself lives outside
+`.claude/` on purpose: `.claude/skills/` is read by Claude Code and by nothing else, so anything kept
+only here would not exist for any other agent. Keeping the method in `system/` is what makes this
+behaviour portable — the same reason `onboard` works everywhere.
 
-## Step 1 — Retrace, concretely
-
-Say exactly where you looked: which `index.md` files, which pages, which searches, which words. Not
-"I searched the workspace" — the actual list.
-
-This is not ceremony. Most of the time the cause becomes obvious here, and it is usually that a
-perfectly good file was never opened because nothing pointed at it.
-
-## Step 2 — Classify the miss
-
-One of five. Naming it decides what the fix is:
-
-| Class | What happened | Where the fix goes |
-|---|---|---|
-| **Routing** | Nothing pointed you toward the right domain | `AGENTS.md` routing table, or the domain's index preamble |
-| **Indexing** | The file existed but had no index row, or a row too vague to choose from | That domain's `index.md` |
-| **Placement** | The file is in the wrong domain, so no sensible search would reach it | Move it — and leave a row where it used to be |
-| **Stale** | It was found, but what it said stopped being true | The page, plus a `fix` line in the log |
-| **Genuine gap** | It really is not written down anywhere | Offer to capture it now, while the user has it in mind |
-
-The last one is a real and common answer. Do not force a miss into one of the first four because a
-fix feels more useful — a fabricated cause produces a fix that changes nothing.
-
-## Step 3 — Widen the search, once
-
-Before concluding it is a genuine gap: search the whole workspace for the term and its obvious
-synonyms, and read the logs of the two most likely domains. Once — not a general hunt.
-
-## Step 4 — Say what went wrong, in one line
-
-Plainly, without a preamble and without over-apologising. *"It was there, but the index row said only
-the filename, so I had no reason to open it."* That sentence is the deliverable.
-
-## Step 5 — Propose exactly one fix
-
-One concrete edit, shown in full: the row you would add, the pointer you would correct, the file you
-would move. Wait for a yes.
-
-**Then look for the pattern.** If this is the third miss of the same class, the fix is not another
-row — it is a rule. Say so, and offer to write it into `decisions.md`. Three misses of one kind is
-the system telling you something about its own shape.
+**Do not restate the procedure here.** Two copies of a method is how one of them goes stale, and the
+copy in `system/` is the one `AGENTS.md` points every other agent at.
 
 ## Verification
 
-1. The retrace names actual files and searches, not a general description of looking.
-2. The class was chosen from the five, and the fix matches the class.
-3. The proposed fix is a specific edit the user could accept or reject as written.
-4. Nothing was changed before they said yes.
-5. If a pattern was named, it was because there were genuinely three — not because it sounded good.
+The procedure carries its own verification section. Run it from there — and confirm you actually
+opened `system/procedures/backtrack.md` this run rather than working from memory of it.
 
 ## What this skill does not do
 
-- **It does not keep a ledger of misses.** There is no log file of failures here, on purpose — one
-  more file to maintain, read by nobody. The fix goes into the index or the routing, where it does
-  its work; a repeated pattern goes into `decisions.md`.
-- **It does not apologise at length.** One line on the cause, then the fix.
-- **It does not fix the symptom only.** Finding the file the user wanted is the start of this skill,
-  not the end of it.
+It proposes one concrete edit and changes nothing until the user says yes.
+
+It does not duplicate, summarise or override `system/procedures/backtrack.md`. If this file and the
+procedure ever disagree, the procedure is correct and this file is the defect.
