@@ -1,3 +1,7 @@
 .DS_Store
 _trash/
 *.local.md
+
+# Machine-local marker, not part of the product. An empty file some Claude Code
+# setups drop here to permit edits in a primary checkout. Never yours to commit.
+.claude/.allow-primary-edits
