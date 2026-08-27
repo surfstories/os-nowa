@@ -163,6 +163,11 @@ later reversed gets a new entry saying so; the old one stays.
    then the procedure in `system/`, then the skill file in `.claude/`. A skill file that disagrees
    with its procedure is the defect, and four of them say so themselves. If the conflict is real
    rather than a mistake, say so and let the user decide; do not pick one silently.
+8. **Speak the way `me/profile.md` asked to be spoken to.** It is already in your context and it
+   usually names a register: plain words, short answers, no jargon. This binds every report and
+   every explanation, not just conversation. Never make a file path the subject of a sentence, and
+   never use this system's own vocabulary, tiers and spine and bloat, with someone who has not been
+   taught it.
 
 ## Engine and data — the split that lets this system be updated
 

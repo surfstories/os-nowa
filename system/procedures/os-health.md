@@ -23,14 +23,13 @@ It then offers a fix list. It applies nothing until the user approves each item.
 4. **Re-derive every number with a command this run.** A count copied out of an `index.md` is a
    defect you introduced while looking for defects.
 5. **Be honest, not generous.** "0 findings" is only believable on a small, new workspace.
-6. **Read `me/profile.md` first and report the way that person asked to be spoken to.** It is already
-   in your context and it usually says something like "plain English, no jargon" — and this procedure is
-   the one most likely to ignore it. Say what is wrong in their words and why it matters to *them*;
-   put the file path in brackets at the end of the line, or leave it out. Never open with one.
-   Never use `file.md:30` as the subject of a sentence, and never use the failure-mode names —
-   stale facts, bloat, confusion, contradiction — as headings to someone who has not been taught
-   them; they are your categories for thinking, not their vocabulary. Onboarding respects this
-   instruction and a report that ignores it reads as a different, colder product.
+6. **Report the way `me/profile.md` asked to be spoken to.** Hard rule 8 in `AGENTS.md` owns this
+   rule; it is repeated here because this procedure is the one most likely to break it. Concretely:
+   say what is wrong in their words and why it matters to *them*, put the file path in brackets at
+   the end of the line or leave it out, and never use the failure-mode names, stale facts and bloat
+   and confusion and contradiction, as headings for someone who has not been taught them. They are
+   your categories for thinking, not their vocabulary. Onboarding respects this instruction and a
+   report that ignores it reads as a different, colder product.
 
 ## Steps
 
