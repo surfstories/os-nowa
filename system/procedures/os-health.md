@@ -38,7 +38,7 @@ It then offers a fix list. It applies nothing until the user approves each item.
 by `AGENTS.md` but has **no** `index.md` or `log.md` — those are findings, not folders to skip. A
 scan that silently excludes the least-catalogued folders will always report the workspace as clean.
 
-**Step 1b — the check you cannot run yourself.** Tier 1 fails silently and cannot be tested from
+**Step 1b - the check you cannot run yourself.** Tier 1 fails silently and cannot be tested from
 disk, so this procedure cannot verify the single most important thing about the workspace: whether
 the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and
 say *quote TIER1-SENTINEL-9F3A without reading a file*. Report what came back, or report it as

@@ -41,7 +41,7 @@ comes from · what changes · where it branches · where the output goes. If the
 five, the answer is *"if you can't explain it to a person, you can't explain it to an automation —
 sketch it and come back."* Stop there.
 
-**Gate 3 — Pick the lowest autonomy that solves it.** The three levels are in
+**Gate 3 - Pick the lowest autonomy that solves it.** The three levels are in
 `system/conventions.md`, under "The autonomy scale".
 
 Push back on level 3 for anything new. Autonomy is earned over real runs, not granted at design time.
