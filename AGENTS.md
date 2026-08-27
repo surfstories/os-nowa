@@ -17,6 +17,12 @@ warmly in one line and offer to start — then read
 `system/procedures/onboarding.md` and follow it. Do not begin any other work until the user has
 either finished onboarding or explicitly declined it.
 
+**One exception, and only one: "check my system" runs anyway, and runs Step 1b only.** Whether Tier 1
+is reaching you is testable before onboarding, because the diagnostic token ships in the profile stub,
+and a broken install is worth catching on day one rather than after the user has filled the folder
+with their own material. Report that one result, offer onboarding, and stop. Nothing else in
+`system/procedures/os-health.md` has anything to look at yet, so there is nothing else to run.
+
 ## Every session after that
 
 If the profile *is* filled in, this is someone coming back. **Open by showing them you already know
