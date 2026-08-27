@@ -140,6 +140,11 @@ owner instead.
 A number that appears in four files is not four times as clear. It is three chances to disagree with
 itself, and the copies read as correct right up to the day one of them changes.
 
+**One exception: a template may carry a value it hands to the user.** `system/templates/domain-log.md`
+lists the five operation words, because the file it becomes lives in the user's own domain and a
+pointer into `system/` would be useless there. A template is the one place a second copy is doing
+work. Everywhere else, point.
+
 Superseded versions move to `<domain>/OLD/<YYYY-MM-DD>-<what>/`. Never leave `v2` next to `v3`.
 
 **`OLD/` and `_trash/` are two different places and neither one is a delete.** `OLD/` holds a
