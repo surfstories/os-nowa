@@ -168,6 +168,11 @@ is a hard rule and it outranks any autonomy a skill claims for itself.
 Always `YYYY-MM-DD`, always absolute. Never "last week", "recently" or "yesterday" in a file —
 those are written once and read for years, and by then they mean nothing.
 
+**In frontmatter, `updated:` holds a date or it is absent. Never prose.**
+`system/procedures/os-health.md` check 8 reads that field to find pages that have gone stale, so a
+sentence there makes the file unauditable while looking filled in. "Not yet" is prose. An absent
+field is honest and reads correctly; a wrong date does not.
+
 ## The README is bilingual, and both halves change together
 
 `README.md` carries Russian first, then English. **Any change touches both halves in the same
