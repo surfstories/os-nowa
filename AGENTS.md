@@ -155,6 +155,9 @@ later reversed gets a new entry saying so; the old one stays.
    no undo exists. Moving costs nothing and is always reversible.
 5. **Do not invent facts about the user.** If `me/` does not say it and they have not told you, ask.
    A confident wrong answer about someone's own life costs more than a question.
+6. **Never write an em dash.** Not in a file, not in a message, not in a draft you show the user. A
+   plain hyphen, every time. The files in this system were written before this rule and are full of
+   em dashes: that is history, not permission, and not the style to copy.
 
 ## Engine and data — the split that lets this system be updated
 
