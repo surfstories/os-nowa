@@ -38,6 +38,13 @@ It then offers a fix list. It applies nothing until the user approves each item.
 by `AGENTS.md` but has **no** `index.md` or `log.md` — those are findings, not folders to skip. A
 scan that silently excludes the least-catalogued folders will always report the workspace as clean.
 
+**Step 1b — the check you cannot run yourself.** Tier 1 fails silently and cannot be tested from
+disk, so this procedure cannot verify the single most important thing about the workspace: whether
+the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and
+say *quote TIER1-SENTINEL-9F3A without reading a file*. Report what came back, or report it as
+unverified with the reason. Check 4 below measures whether Tier 1 is too big; nothing in this
+procedure measures whether it arrives. The reasoning is in `system/tiers.md`.
+
 **Step 2 — Run the checks.**
 
 | # | Check | How | Mode |
@@ -45,7 +52,7 @@ scan that silently excludes the least-catalogued folders will always report the 
 | 1 | Spine | Every domain has `index.md` **and** `log.md` | Confusion |
 | 2 | Index vs disk | Files in `pages/` and `sources/` with no index row; index rows pointing at no file | Confusion |
 | 3 | Pointers | Every path mentioned in `AGENTS.md` and every `index.md` resolves to something real | Confusion |
-| 4 | Tier 1 budget | `wc -l me/profile.md me/priorities.md me/connections.md`, against the budget in `system/tiers.md` | Bloat |
+| 4 | Tier 1 size | `wc -l me/profile.md me/priorities.md me/connections.md`, against the budget in `system/tiers.md`. Size only, never delivery: see Step 1b | Bloat |
 | 5 | Row quality | Share of index rows a reader could choose from without opening the file. Read them; do not count dashes | Confusion |
 | 6 | Duplication | The same fact stated in two places with no pointer between them | Bloat |
 | 7 | Contradiction | The same fact with two different values. Say which file should win and why | Contradiction |
@@ -79,6 +86,8 @@ later nobody can tell. Report, then approve, then fix, then log — never log fi
 3. Nothing was deleted. Anything removed is sitting in `_trash/<date>/` and the report says so.
 4. Anything that could not be checked is listed as unverified, with the reason. An explicit "I could
    not check this" is a useful answer; a silent omission is not.
+5. Step 1b was either run by the user in a fresh session, or reported as unverified. A report that
+   is silent about Tier 1 delivery reads as though it checked.
 
 ## What this procedure does not do
 
