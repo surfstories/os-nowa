@@ -21,9 +21,10 @@ Nothing in this file is loaded automatically. Read it when you are about to chan
    disk.
 
 4. **Never test always-loaded context from disk.** A Tier 1 change is verified by asking a fresh
-   session to quote `TIER1-SENTINEL-9F3A` without opening a file. Correct on disk and never
-   delivered is the failure this rule exists to catch, and it is the one failure a diff cannot show.
-   The reasoning is in `system/tiers.md`.
+   session whether there is a diagnostic token in the instructions it was given, and to quote it.
+   **Never name the token in the question**: a prompt containing it is answered by itself, whether or
+   not anything loaded. Correct on disk and never delivered is the failure this rule exists to catch,
+   and it is the one failure a diff cannot show. The reasoning is in `system/tiers.md`.
 
 5. **Editing a rule means editing every copy of it in the same commit.** Before you change a rule's
    wording, grep the repository for it. A rule that lives in two files will be updated in one of

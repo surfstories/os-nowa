@@ -40,9 +40,11 @@ scan that silently excludes the least-catalogued folders will always report the 
 
 **Step 1b - the check you cannot run yourself.** Tier 1 fails silently and cannot be tested from
 disk, so this procedure cannot verify the single most important thing about the workspace: whether
-the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and
-say *quote TIER1-SENTINEL-9F3A without reading a file*. Report what came back, or report it as
-unverified with the reason. Check 4 below measures whether Tier 1 is too big; nothing in this
+the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and ask
+it whether there is a diagnostic token in the instructions it was given, and to quote it. **Do not
+name the token when you tell them what to ask.** A prompt containing it is answered by itself and the
+check passes either way; you know the token, so this is the mistake to avoid. Report what came back,
+or report it as unverified with the reason. Check 4 below measures whether Tier 1 is too big; nothing in this
 procedure measures whether it arrives. The reasoning is in `system/tiers.md`.
 
 **Step 2 — Run the checks.**
