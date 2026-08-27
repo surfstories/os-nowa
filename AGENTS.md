@@ -95,7 +95,7 @@ way; only the delivery differs. Do not answer a question about the user without 
 | `decisions.md` | Append-only record of decisions and why they were made. |
 | `projects/` | Things being built. One folder each, each with a spec. |
 | `<domain>/index.md` | Any subject the user keeps material on. The index is the catalog — read it first. |
-| `system/` | The rules this system runs on: `tiers.md`, `conventions.md`, `templates/`, `procedures/`, `learn/`. |
+| `system/` | The rules this system runs on: `system/tiers.md`, `system/conventions.md`, `system/templates/`, `system/procedures/`, `system/learn/`. |
 
 When you need something from a domain, read its `index.md` and let the rows tell you which one or
 two pages to open. Routing points at indexes so that moving a file cannot break it.
