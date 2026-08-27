@@ -95,7 +95,7 @@ way; only the delivery differs. Do not answer a question about the user without 
 | `decisions.md` | Append-only record of decisions and why they were made. |
 | `projects/` | Things being built. One folder each, each with a spec. |
 | `<domain>/index.md` | Any subject the user keeps material on. The index is the catalog — read it first. |
-| `system/` | The rules this system runs on: `tiers.md`, `conventions.md`, `templates/`, `procedures/`, `learn/`. |
+| `system/` | The rules this system runs on: `system/tiers.md`, `system/conventions.md`, `system/templates/`, `system/procedures/`, `system/learn/`. |
 
 When you need something from a domain, read its `index.md` and let the rows tell you which one or
 two pages to open. Routing points at indexes so that moving a file cannot break it.
@@ -164,8 +164,9 @@ later reversed gets a new entry saying so; the old one stays.
 Two kinds of file live here and they are owned by different people.
 
 **The engine is ours.** `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `README.md`, `LICENSE`,
-`.cursor/`, `system/**` and `.claude/**`. These are the product. A future version of OS_Nowa will
-replace them.
+`.gitignore`, `.cursor/`, `system/**` and `.claude/**`. These are the product. A future version of
+OS_Nowa will replace them. **This paragraph is the only list of them**; anywhere else that needs to
+say "an engine path" points here rather than writing the paths out again.
 
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
 folder. Nothing in an update will ever touch these.

@@ -1,7 +1,6 @@
 ---
 title: Connections
 tier: 1
-updated: empty by design — this file stays blank until you connect something
 ---
 
 # Connections

@@ -13,6 +13,9 @@ material rather than an empty skeleton.
 This file exists so the skill can be triggered by name; the procedure is the content, and it lives
 outside `.claude/` so that agents other than Claude Code can run the same flow.
 
+**Do not restate the procedure here.** Two copies of a method is how one of them goes stale, and the
+copy in `system/` is the one `AGENTS.md` points every other agent at.
+
 ## When to run
 
 - The folder has never been set up (`me/profile.md` says **Status: not yet filled in**).
@@ -21,30 +24,13 @@ outside `.claude/` so that agents other than Claude Code can run the same flow.
 
 **Do not run it** in the middle of other work just because `me/` looks thin. Offer; wait for a yes.
 
-## Hard rules
-
-1. **Never write to an engine path.** `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `README.md`, `LICENSE`,
-   `.cursor/`, `system/**` and `.claude/**` are the product, not the user's data. Onboarding fills
-   `me/`, creates the first domain, and appends to `decisions.md`. Nothing else. If onboarding edits
-   the engine, the user's work can never be updated again — this is the rule that protects that.
-2. **The user's language, from their first message.** Confirm it in one line and stay in it.
-3. **Every choice is a numbered menu.** They answer with a number, never with a paragraph.
-4. **Nothing is created without a clear yes.** Say what you are about to write, then write it.
-5. **Never ask for a password, key or token.** None is needed.
-
 ## Verification
 
-Onboarding is not finished until all four of these are true — check them, do not assume:
+The procedure carries its own verification section, at Step 7. Run it from there, and confirm you
+actually opened `system/procedures/onboarding.md` this run rather than working from memory of it.
 
-1. `me/profile.md` no longer contains the string `<!-- filled by onboarding -->`, and holds a real name.
-2. `me/priorities.md` holds **at least three** items the user actually said.
-3. **At least one domain folder exists** with both an `index.md` and a `log.md`, and the index has at
-   least one row worth choosing from.
-4. `decisions.md` holds **at least one** entry.
-5. `tasks.md` holds one open item, or Step 6b established there was genuinely nothing open.
-
-If any is false, onboarding stopped early. Say so plainly and offer to finish it, rather than
-declaring it done.
+If any of its checks is false, onboarding stopped early. Say so plainly and offer to finish it,
+rather than declaring it done.
 
 ## What this skill does not do
 
@@ -52,4 +38,7 @@ declaring it done.
   connected, that is their own setup, and it earns a row in `me/connections.md` afterwards.
 - **It does not fill the system with example content.** Every artifact it creates comes from the
   user's own answers. An empty domain the user has to delete is worse than no domain.
-- **It does not tune the engine to the user.** See hard rule 1.
+- **It does not tune the engine to the user.** See hard rule 4 of the procedure.
+
+It does not duplicate, summarise or override `system/procedures/onboarding.md`. If this file and the
+procedure ever disagree, the procedure is correct and this file is the defect.

@@ -1,7 +1,6 @@
 ---
 title: Profile
 tier: 1
-updated: not yet
 ---
 
 # Profile

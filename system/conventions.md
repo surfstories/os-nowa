@@ -123,6 +123,12 @@ something you know is already written elsewhere, link instead.
 
 Superseded versions move to `<domain>/OLD/<YYYY-MM-DD>-<what>/`. Never leave `v2` next to `v3`.
 
+**`OLD/` and `_trash/` are two different places and neither one is a delete.** `OLD/` holds a
+superseded version of something still in use, inside the domain that owns it, so the current file has
+one obvious name and the history sits beside it. `_trash/<YYYY-MM-DD>/` holds anything removed at
+all, and it lives at the top level because what goes in it no longer belongs to a domain. The rule
+that nothing is ever deleted is hard rule 4 in `AGENTS.md`; these are the two destinations it means.
+
 ## Dates
 
 Always `YYYY-MM-DD`, always absolute. Never "last week", "recently" or "yesterday" in a file —

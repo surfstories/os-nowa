@@ -23,11 +23,10 @@ Nothing here needs a terminal, an account, a key or an install.
    `2` = not now.
 3. **Never create or change a file without a clear yes.** Say what you are about to write, in one
    line, then write it.
-4. **Never write to an engine path.** `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `README.md`, `LICENSE`,
-   `.cursor/`, `system/**`, `.claude/**`. Onboarding writes to `me/`, to one new domain folder, and
-   to `decisions.md`. Nothing else, ever. If it seems useful to "adapt the instructions to this
-   user", that is exactly the thing this rule forbids — it would make their workspace impossible to
-   update later.
+4. **Never write to an engine path.** `AGENTS.md` lists them, under "Engine and data"; that list is
+   the only one. Onboarding writes to `me/`, to one new domain folder, and to `decisions.md`.
+   Nothing else, ever. If it seems useful to "adapt the instructions to this user", that is exactly
+   the thing this rule forbids: it would make their workspace impossible to update later.
 5. **Never ask for a password, an API key or a token.** None is needed for any of this.
 6. **Ask one thing at a time.** A list of six questions gets one answer.
 7. **If something goes wrong, solve it together.** Invite them to paste what they see. Do not abandon
@@ -217,7 +216,7 @@ list, because the first thing they see next time is something they never asked f
 
 ## Step 7 — Check your own work
 
-Before celebrating, verify all four, by actually looking:
+Before celebrating, verify every one of these, by actually looking:
 
 1. `me/profile.md` has a real name and no `<!-- filled by onboarding -->`.
 2. `me/priorities.md` holds **at least three** items.

@@ -1,7 +1,6 @@
 ---
 title: Priorities
 tier: 1
-updated: not yet
 ---
 
 # Priorities
