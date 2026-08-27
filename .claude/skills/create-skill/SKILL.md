@@ -42,7 +42,7 @@ Six things are required in every skill file. Nothing else is:
 |---|---|---|---|
 | 1 | `name` | frontmatter | matches the folder name exactly |
 | 2 | `description` | frontmatter | what it does **and** the trigger phrases. Under 600 characters |
-| 3 | `autonomy` | frontmatter | 1, 2 or 3, with the meaning in a trailing comment |
+| 3 | `autonomy` | frontmatter | 1, 2 or 3 from the scale in `system/conventions.md`, with the meaning in a trailing comment |
 | 4 | `## What this does` | body, first | one paragraph |
 | 5 | `## Verification` | body | a command or an observation. "Check it looks right" is not one |
 | 6 | `## What this skill does not do` | body | the boundaries, and anything it must refuse |

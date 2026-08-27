@@ -135,6 +135,7 @@ owner instead.
 | The five classes of miss | `system/procedures/backtrack.md` |
 | The register to speak in | `AGENTS.md`, hard rule 8 |
 | The em dash ban | `AGENTS.md`, hard rule 6 |
+| The autonomy scale | this file, under "The autonomy scale" |
 
 A number that appears in four files is not four times as clear. It is three chances to disagree with
 itself, and the copies read as correct right up to the day one of them changes.
@@ -146,6 +147,21 @@ superseded version of something still in use, inside the domain that owns it, so
 one obvious name and the history sits beside it. `_trash/<YYYY-MM-DD>/` holds anything removed at
 all, and it lives at the top level because what goes in it no longer belongs to a domain. The rule
 that nothing is ever deleted is hard rule 4 in `AGENTS.md`; these are the two destinations it means.
+
+## The autonomy scale
+
+Every skill file carries `autonomy:` in its frontmatter, and `system/procedures/level-up.md` picks a
+level at its third gate. One scale, three levels:
+
+| Level | What happens |
+|---|---|
+| 1 | It suggests or reports; the user decides every step |
+| 2 | It drafts; the user reviews before anything is saved or sent |
+| 3 | It runs; the user spot-checks |
+
+**Level 3 is earned over real runs, never granted at design time.** Nothing that has never been run
+starts there, and nothing that sends anything to another person is ever level 3, because draft-first
+is a hard rule and it outranks any autonomy a skill claims for itself.
 
 ## Dates
 
