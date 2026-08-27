@@ -49,7 +49,8 @@ Three rules make an index worth reading:
 2. **The index is an output, not a chore.** It is written by whatever operation created the page, in
    the same run. Nobody sits down to maintain an index; if that is ever necessary, the rule above was
    already broken.
-3. **Roughly 250 characters per row.** Enough to choose from, not enough to replace the page.
+3. **Keep a row to the length `system/tiers.md` budgets.** Enough to choose from, not enough to
+   replace the page.
 
 ## `log.md` — the format
 
@@ -120,6 +121,23 @@ rather than restating it.
 This is not tidiness. A fact written in two places will be updated in one of them, and from that
 moment you have two answers and no way to tell which is current. If you catch yourself writing
 something you know is already written elsewhere, link instead.
+
+**Which file owns which fact.** These are the ones most likely to end up restated, because more than
+one file needs them. The owner is the only place the value is written; everywhere else names the
+owner instead.
+
+| Fact | Owner |
+|---|---|
+| The Tier 1 line budget | `system/tiers.md` |
+| The index row length | `system/tiers.md` |
+| The list of engine paths | `AGENTS.md`, under "Engine and data" |
+| The five log operation words | this file, under "`log.md` - the format" |
+| The five classes of miss | `system/procedures/backtrack.md` |
+| The register to speak in | `AGENTS.md`, hard rule 8 |
+| The em dash ban | `AGENTS.md`, hard rule 6 |
+
+A number that appears in four files is not four times as clear. It is three chances to disagree with
+itself, and the copies read as correct right up to the day one of them changes.
 
 Superseded versions move to `<domain>/OLD/<YYYY-MM-DD>-<what>/`. Never leave `v2` next to `v3`.
 

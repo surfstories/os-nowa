@@ -102,7 +102,7 @@ It will. The pressure is always toward adding.
 
 Ask the two questions: *will this be true in a month?* and *would an agent be wrong without it?* If
 the answer to either is no, it belongs in a domain page. Then check the line count. If the three
-`me/` files are past 150 lines, something in them has become a description of your life rather than
-the few facts an agent needs to start.
+`me/` files are past that budget, something in them has become a description of your life rather
+than the few facts an agent needs to start.
 
 Cutting Tier 1 is maintenance, not loss. The content moves down a tier; it does not disappear.

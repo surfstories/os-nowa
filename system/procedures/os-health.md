@@ -45,7 +45,7 @@ scan that silently excludes the least-catalogued folders will always report the 
 | 1 | Spine | Every domain has `index.md` **and** `log.md` | Confusion |
 | 2 | Index vs disk | Files in `pages/` and `sources/` with no index row; index rows pointing at no file | Confusion |
 | 3 | Pointers | Every path mentioned in `AGENTS.md` and every `index.md` resolves to something real | Confusion |
-| 4 | Tier 1 budget | `wc -l me/profile.md me/priorities.md me/connections.md` — over ~150 total is a finding | Bloat |
+| 4 | Tier 1 budget | `wc -l me/profile.md me/priorities.md me/connections.md`, against the budget in `system/tiers.md` | Bloat |
 | 5 | Row quality | Share of index rows a reader could choose from without opening the file. Read them; do not count dashes | Confusion |
 | 6 | Duplication | The same fact stated in two places with no pointer between them | Bloat |
 | 7 | Contradiction | The same fact with two different values. Say which file should win and why | Contradiction |

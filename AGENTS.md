@@ -61,8 +61,8 @@ whole design exists to keep the always-loaded tier small.
 
 - **Tier 1 — always loaded.** This file plus the three files listed below. Stable facts only: who
   the user is, what they are working toward, what this system can reach. If a fact changes weekly,
-  it does not belong here. Budget: keep the three files under **150 lines in total**. That number is
-  the discipline, not the ceiling — the tier model only works if this tier stays cheap.
+  it does not belong here. The three files together stay inside the Tier 1 budget, which
+  `system/tiers.md` sets and explains; the tier model only works if this tier stays cheap.
 - **Tier 2 — the catalog, loaded when you enter a domain.** A domain's `index.md` and `log.md`. Read
   the index *first*, always; its job is to let you choose the one or two pages worth opening.
 - **Tier 3 — the content, loaded one file at a time.** Individual pages and sources. Never read a
