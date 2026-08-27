@@ -40,12 +40,19 @@ scan that silently excludes the least-catalogued folders will always report the 
 
 **Step 1b - the check you cannot run yourself.** Tier 1 fails silently and cannot be tested from
 disk, so this procedure cannot verify the single most important thing about the workspace: whether
-the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and ask
-it whether there is a diagnostic token in the instructions it was given, and to quote it. **Do not
-name the token when you tell them what to ask.** A prompt containing it is answered by itself and the
-check passes either way; you know the token, so this is the mistake to avoid. Report what came back,
-or report it as unverified with the reason. Check 4 below measures whether Tier 1 is too big; nothing in this
-procedure measures whether it arrives. The reasoning is in `system/tiers.md`.
+the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and
+ask it whether there is a diagnostic token in the instructions it was given, and to quote it. **Do
+not name the token when you tell them what to ask.** A prompt containing it is answered by itself
+and the check passes either way; you know the token, so this is the mistake to avoid. Report what
+came back, or report it as unverified with the reason. Check 4 below measures whether Tier 1 is too
+big; nothing in this procedure measures whether it arrives. The reasoning is in `system/tiers.md`.
+
+**Your own session is not that check, even when it looks like one.** You may say what you observe
+about this session, and it is worth saying. You may not present it as the result, and you may not
+tell the user their check is optional or not urgent because of it. You are the one party who cannot
+run this: the token is in your context either way, and from the inside you cannot tell whether it
+arrived by autoload or because something read the file earlier this run. An agent that certifies its
+own always-loaded context has tested nothing and reported a pass.
 
 **Step 2 — Run the checks.**
 
@@ -89,7 +96,8 @@ later nobody can tell. Report, then approve, then fix, then log — never log fi
 4. Anything that could not be checked is listed as unverified, with the reason. An explicit "I could
    not check this" is a useful answer; a silent omission is not.
 5. Step 1b was either run by the user in a fresh session, or reported as unverified. A report that
-   is silent about Tier 1 delivery reads as though it checked.
+   is silent about Tier 1 delivery reads as though it checked, and a report that answers Step 1b
+   out of this session's own context has not run it at all.
 
 ## What this procedure does not do
 
