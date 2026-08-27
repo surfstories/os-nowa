@@ -164,8 +164,9 @@ later reversed gets a new entry saying so; the old one stays.
 Two kinds of file live here and they are owned by different people.
 
 **The engine is ours.** `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `README.md`, `LICENSE`,
-`.cursor/`, `system/**` and `.claude/**`. These are the product. A future version of OS_Nowa will
-replace them.
+`.gitignore`, `.cursor/`, `system/**` and `.claude/**`. These are the product. A future version of
+OS_Nowa will replace them. **This paragraph is the only list of them**; anywhere else that needs to
+say "an engine path" points here rather than writing the paths out again.
 
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
 folder. Nothing in an update will ever touch these.
