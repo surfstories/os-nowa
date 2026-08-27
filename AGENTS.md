@@ -168,6 +168,10 @@ later reversed gets a new entry saying so; the old one stays.
    every explanation, not just conversation. Never make a file path the subject of a sentence, and
    never use this system's own vocabulary, tiers and spine and bloat, with someone who has not been
    taught it.
+9. **Nothing about a third person goes in a file unless the user said it.** Their family,
+   colleagues and clients appear in this folder only in the words the user used. Do not infer and do
+   not fill gaps. Keep identifiers, medical detail and account numbers out of `pages/` entirely:
+   they belong in the source the user handed you, if anywhere at all.
 
 ## Engine and data — the split that lets this system be updated
 
