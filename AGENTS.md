@@ -61,8 +61,8 @@ whole design exists to keep the always-loaded tier small.
 
 - **Tier 1 — always loaded.** This file plus the three files listed below. Stable facts only: who
   the user is, what they are working toward, what this system can reach. If a fact changes weekly,
-  it does not belong here. Budget: keep the three files under **150 lines in total**. That number is
-  the discipline, not the ceiling — the tier model only works if this tier stays cheap.
+  it does not belong here. The three files together stay inside the Tier 1 budget, which
+  `system/tiers.md` sets and explains; the tier model only works if this tier stays cheap.
 - **Tier 2 — the catalog, loaded when you enter a domain.** A domain's `index.md` and `log.md`. Read
   the index *first*, always; its job is to let you choose the one or two pages worth opening.
 - **Tier 3 — the content, loaded one file at a time.** Individual pages and sources. Never read a
@@ -96,6 +96,7 @@ way; only the delivery differs. Do not answer a question about the user without 
 | `projects/` | Things being built. One folder each, each with a spec. |
 | `<domain>/index.md` | Any subject the user keeps material on. The index is the catalog — read it first. |
 | `system/` | The rules this system runs on: `system/tiers.md`, `system/conventions.md`, `system/templates/`, `system/procedures/`, `system/learn/`. |
+| `system/maintaining.md` | Rules for changing the engine itself. Irrelevant to running a workspace; read it before editing an engine path. |
 
 When you need something from a domain, read its `index.md` and let the rows tell you which one or
 two pages to open. Routing points at indexes so that moving a file cannot break it.
@@ -150,14 +151,29 @@ later reversed gets a new entry saying so; the old one stays.
 3. **Never write a secret into this folder.** No passwords, no API keys, no tokens. Not in
    `me/connections.md`, not anywhere. If the user offers one, decline and explain where it should
    live instead.
-4. **Never delete. Move to `_trash/<date>/`.** The install leaves a local git history, but the user
-   will not be committing to it, so anything written since the last commit is gone for good. Assume
-   no undo exists. Moving costs nothing and is always reversible.
+4. **Never delete. Move to `_trash/<YYYY-MM-DD>/`.** This binds shell commands too: no `rm`, no
+   `mv` over a file that already exists, no redirect that truncates one. And nothing outside this
+   folder is yours to touch at all without asking first. The install leaves a local git history, but
+   the user will not be committing to it, so anything written since the last commit is gone for
+   good. Assume no undo exists. Moving costs nothing and is always reversible.
 5. **Do not invent facts about the user.** If `me/` does not say it and they have not told you, ask.
    A confident wrong answer about someone's own life costs more than a question.
 6. **Never write an em dash.** Not in a file, not in a message, not in a draft you show the user. A
    plain hyphen, every time. The files in this system were written before this rule and are full of
    em dashes: that is history, not permission, and not the style to copy.
+7. **When two instructions conflict, the more general one wins, in this order:** these hard rules,
+   then the procedure in `system/`, then the skill file in `.claude/`. A skill file that disagrees
+   with its procedure is the defect, and four of them say so themselves. If the conflict is real
+   rather than a mistake, say so and let the user decide; do not pick one silently.
+8. **Speak the way `me/profile.md` asked to be spoken to.** It is already in your context and it
+   usually names a register: plain words, short answers, no jargon. This binds every report and
+   every explanation, not just conversation. Never make a file path the subject of a sentence, and
+   never use this system's own vocabulary, tiers and spine and bloat, with someone who has not been
+   taught it.
+9. **Nothing about a third person goes in a file unless the user said it.** Their family,
+   colleagues and clients appear in this folder only in the words the user used. Do not infer and do
+   not fill gaps. Keep identifiers, medical detail and account numbers out of `pages/` entirely:
+   they belong in the source the user handed you, if anywhere at all.
 
 ## Engine and data — the split that lets this system be updated
 
@@ -170,6 +186,11 @@ say "an engine path" points here rather than writing the paths out again.
 
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
 folder. Nothing in an update will ever touch these.
+
+**A skill the user made is theirs, not ours.** An update replaces only the six skills OS_Nowa ships
+with; any other folder under `.claude/skills/` is left exactly as it is. Say this when you write one,
+so nobody builds five skills on the assumption that the next version keeps them, and so nobody
+deletes one believing it was part of the product.
 
 **Onboarding never writes to an engine path.** It fills `me/`, creates the user's first domain, and
 writes to `decisions.md` — and that is all. The temptation to "adjust `AGENTS.md` to this user" is

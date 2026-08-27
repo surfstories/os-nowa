@@ -23,14 +23,13 @@ It then offers a fix list. It applies nothing until the user approves each item.
 4. **Re-derive every number with a command this run.** A count copied out of an `index.md` is a
    defect you introduced while looking for defects.
 5. **Be honest, not generous.** "0 findings" is only believable on a small, new workspace.
-6. **Read `me/profile.md` first and report the way that person asked to be spoken to.** It is already
-   in your context and it usually says something like "plain English, no jargon" — and this procedure is
-   the one most likely to ignore it. Say what is wrong in their words and why it matters to *them*;
-   put the file path in brackets at the end of the line, or leave it out. Never open with one.
-   Never use `file.md:30` as the subject of a sentence, and never use the failure-mode names —
-   stale facts, bloat, confusion, contradiction — as headings to someone who has not been taught
-   them; they are your categories for thinking, not their vocabulary. Onboarding respects this
-   instruction and a report that ignores it reads as a different, colder product.
+6. **Report the way `me/profile.md` asked to be spoken to.** Hard rule 8 in `AGENTS.md` owns this
+   rule; it is repeated here because this procedure is the one most likely to break it. Concretely:
+   say what is wrong in their words and why it matters to *them*, put the file path in brackets at
+   the end of the line or leave it out, and never use the failure-mode names, stale facts and bloat
+   and confusion and contradiction, as headings for someone who has not been taught them. They are
+   your categories for thinking, not their vocabulary. Onboarding respects this instruction and a
+   report that ignores it reads as a different, colder product.
 
 ## Steps
 
@@ -39,6 +38,22 @@ It then offers a fix list. It applies nothing until the user approves each item.
 by `AGENTS.md` but has **no** `index.md` or `log.md` — those are findings, not folders to skip. A
 scan that silently excludes the least-catalogued folders will always report the workspace as clean.
 
+**Step 1b - the check you cannot run yourself.** Tier 1 fails silently and cannot be tested from
+disk, so this procedure cannot verify the single most important thing about the workspace: whether
+the always-loaded files are reaching the agent at all. Ask the user to open one fresh session and
+ask it whether there is a diagnostic token in the instructions it was given, and to quote it. **Do
+not name the token when you tell them what to ask.** A prompt containing it is answered by itself
+and the check passes either way; you know the token, so this is the mistake to avoid. Report what
+came back, or report it as unverified with the reason. Check 4 below measures whether Tier 1 is too
+big; nothing in this procedure measures whether it arrives. The reasoning is in `system/tiers.md`.
+
+**Your own session is not that check, even when it looks like one.** You may say what you observe
+about this session, and it is worth saying. You may not present it as the result, and you may not
+tell the user their check is optional or not urgent because of it. You are the one party who cannot
+run this: the token is in your context either way, and from the inside you cannot tell whether it
+arrived by autoload or because something read the file earlier this run. An agent that certifies its
+own always-loaded context has tested nothing and reported a pass.
+
 **Step 2 — Run the checks.**
 
 | # | Check | How | Mode |
@@ -46,7 +61,7 @@ scan that silently excludes the least-catalogued folders will always report the 
 | 1 | Spine | Every domain has `index.md` **and** `log.md` | Confusion |
 | 2 | Index vs disk | Files in `pages/` and `sources/` with no index row; index rows pointing at no file | Confusion |
 | 3 | Pointers | Every path mentioned in `AGENTS.md` and every `index.md` resolves to something real | Confusion |
-| 4 | Tier 1 budget | `wc -l me/profile.md me/priorities.md me/connections.md` — over ~150 total is a finding | Bloat |
+| 4 | Tier 1 size | `wc -l me/profile.md me/priorities.md me/connections.md`, against the budget in `system/tiers.md`. Size only, never delivery: see Step 1b | Bloat |
 | 5 | Row quality | Share of index rows a reader could choose from without opening the file. Read them; do not count dashes | Confusion |
 | 6 | Duplication | The same fact stated in two places with no pointer between them | Bloat |
 | 7 | Contradiction | The same fact with two different values. Say which file should win and why | Contradiction |
@@ -80,6 +95,9 @@ later nobody can tell. Report, then approve, then fix, then log — never log fi
 3. Nothing was deleted. Anything removed is sitting in `_trash/<date>/` and the report says so.
 4. Anything that could not be checked is listed as unverified, with the reason. An explicit "I could
    not check this" is a useful answer; a silent omission is not.
+5. Step 1b was either run by the user in a fresh session, or reported as unverified. A report that
+   is silent about Tier 1 delivery reads as though it checked, and a report that answers Step 1b
+   out of this session's own context has not run it at all.
 
 ## What this procedure does not do
 

@@ -228,7 +228,7 @@ Before celebrating, verify every one of these, by actually looking:
    go back and do it.
 
 Also check that no `{{` placeholder survives anywhere, and that the three `me/` files together are
-under about 150 lines.
+inside the Tier 1 budget in `system/tiers.md`.
 
 If any of these is false, go back and finish it. **Do not declare onboarding complete on a workspace
 that is still empty** — that is the one failure this whole procedure exists to prevent.

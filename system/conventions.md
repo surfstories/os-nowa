@@ -49,7 +49,8 @@ Three rules make an index worth reading:
 2. **The index is an output, not a chore.** It is written by whatever operation created the page, in
    the same run. Nobody sits down to maintain an index; if that is ever necessary, the rule above was
    already broken.
-3. **Roughly 250 characters per row.** Enough to choose from, not enough to replace the page.
+3. **Keep a row to the length `system/tiers.md` budgets.** Enough to choose from, not enough to
+   replace the page.
 
 ## `log.md` — the format
 
@@ -121,6 +122,29 @@ This is not tidiness. A fact written in two places will be updated in one of the
 moment you have two answers and no way to tell which is current. If you catch yourself writing
 something you know is already written elsewhere, link instead.
 
+**Which file owns which fact.** These are the ones most likely to end up restated, because more than
+one file needs them. The owner is the only place the value is written; everywhere else names the
+owner instead.
+
+| Fact | Owner |
+|---|---|
+| The Tier 1 line budget | `system/tiers.md` |
+| The index row length | `system/tiers.md` |
+| The list of engine paths | `AGENTS.md`, under "Engine and data" |
+| The five log operation words | this file, under "`log.md` - the format" |
+| The five classes of miss | `system/procedures/backtrack.md` |
+| The register to speak in | `AGENTS.md`, hard rule 8 |
+| The em dash ban | `AGENTS.md`, hard rule 6 |
+| The autonomy scale | this file, under "The autonomy scale" |
+
+A number that appears in four files is not four times as clear. It is three chances to disagree with
+itself, and the copies read as correct right up to the day one of them changes.
+
+**One exception: a template may carry a value it hands to the user.** `system/templates/domain-log.md`
+lists the five operation words, because the file it becomes lives in the user's own domain and a
+pointer into `system/` would be useless there. A template is the one place a second copy is doing
+work. Everywhere else, point.
+
 Superseded versions move to `<domain>/OLD/<YYYY-MM-DD>-<what>/`. Never leave `v2` next to `v3`.
 
 **`OLD/` and `_trash/` are two different places and neither one is a delete.** `OLD/` holds a
@@ -129,10 +153,30 @@ one obvious name and the history sits beside it. `_trash/<YYYY-MM-DD>/` holds an
 all, and it lives at the top level because what goes in it no longer belongs to a domain. The rule
 that nothing is ever deleted is hard rule 4 in `AGENTS.md`; these are the two destinations it means.
 
+## The autonomy scale
+
+Every skill file carries `autonomy:` in its frontmatter, and `system/procedures/level-up.md` picks a
+level at its third gate. One scale, three levels:
+
+| Level | What happens |
+|---|---|
+| 1 | It suggests or reports; the user decides every step |
+| 2 | It drafts; the user reviews before anything is saved or sent |
+| 3 | It runs; the user spot-checks |
+
+**Level 3 is earned over real runs, never granted at design time.** Nothing that has never been run
+starts there, and nothing that sends anything to another person is ever level 3, because draft-first
+is a hard rule and it outranks any autonomy a skill claims for itself.
+
 ## Dates
 
 Always `YYYY-MM-DD`, always absolute. Never "last week", "recently" or "yesterday" in a file —
 those are written once and read for years, and by then they mean nothing.
+
+**In frontmatter, `updated:` holds a date or it is absent. Never prose.**
+`system/procedures/os-health.md` check 8 reads that field to find pages that have gone stale, so a
+sentence there makes the file unauditable while looking filled in. "Not yet" is prose. An absent
+field is honest and reads correctly; a wrong date does not.
 
 ## The README is bilingual, and both halves change together
 

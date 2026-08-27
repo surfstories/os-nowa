@@ -66,9 +66,15 @@ autoloading at all. Nothing errors. The agent just behaves as though it does not
 you are not looking for that you will read it as the agent being unhelpful.
 
 So **the only honest test of Tier 1 is to ask a fresh session what it can already see.** Checking the
-file on disk proves nothing at all. That is why `me/profile.md` carries a diagnostic token: open a
-new session and ask it to quote `TIER1-SENTINEL-9F3A` without reading a file. If it can, Tier 1 is
-arriving. If it cannot, something is broken and everything else is guesswork.
+file on disk proves nothing at all. That is why `me/profile.md` carries a diagnostic token: open a new
+session and ask whether there is a diagnostic token in the instructions it was given, and to quote it.
+If it quotes the one in `me/profile.md`, Tier 1 is arriving. If it says there is none, something is
+broken and everything else is guesswork.
+
+**Never name the token in the question.** A prompt that contains it is answered by itself: the session
+reads it back out of your question and the check passes whether or not anything was loaded. Ask
+whether there is one. This is easy to get wrong precisely because whoever sets up the check usually
+knows the token and helpfully includes it.
 
 **Tiers 2 and 3 fail loudly.** They load by an explicit read, so a failure is a missing file and an
 error you can see. For those, checking the disk is the right instrument.
@@ -102,7 +108,7 @@ It will. The pressure is always toward adding.
 
 Ask the two questions: *will this be true in a month?* and *would an agent be wrong without it?* If
 the answer to either is no, it belongs in a domain page. Then check the line count. If the three
-`me/` files are past 150 lines, something in them has become a description of your life rather than
-the few facts an agent needs to start.
+`me/` files are past that budget, something in them has become a description of your life rather
+than the few facts an agent needs to start.
 
 Cutting Tier 1 is maintenance, not loss. The content moves down a tier; it does not disappear.
