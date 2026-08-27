@@ -96,6 +96,7 @@ way; only the delivery differs. Do not answer a question about the user without 
 | `projects/` | Things being built. One folder each, each with a spec. |
 | `<domain>/index.md` | Any subject the user keeps material on. The index is the catalog — read it first. |
 | `system/` | The rules this system runs on: `system/tiers.md`, `system/conventions.md`, `system/templates/`, `system/procedures/`, `system/learn/`. |
+| `system/maintaining.md` | Rules for changing the engine itself. Irrelevant to running a workspace; read it before editing an engine path. |
 
 When you need something from a domain, read its `index.md` and let the rows tell you which one or
 two pages to open. Routing points at indexes so that moving a file cannot break it.
