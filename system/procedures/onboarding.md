@@ -217,7 +217,7 @@ list, because the first thing they see next time is something they never asked f
 
 ## Step 7 — Check your own work
 
-Before celebrating, verify all four, by actually looking:
+Before celebrating, verify every one of these, by actually looking:
 
 1. `me/profile.md` has a real name and no `<!-- filled by onboarding -->`.
 2. `me/priorities.md` holds **at least three** items.
