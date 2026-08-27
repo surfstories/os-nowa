@@ -159,6 +159,10 @@ later reversed gets a new entry saying so; the old one stays.
 6. **Never write an em dash.** Not in a file, not in a message, not in a draft you show the user. A
    plain hyphen, every time. The files in this system were written before this rule and are full of
    em dashes: that is history, not permission, and not the style to copy.
+7. **When two instructions conflict, the more general one wins, in this order:** these hard rules,
+   then the procedure in `system/`, then the skill file in `.claude/`. A skill file that disagrees
+   with its procedure is the defect, and four of them say so themselves. If the conflict is real
+   rather than a mistake, say so and let the user decide; do not pick one silently.
 
 ## Engine and data — the split that lets this system be updated
 
