@@ -1,13 +1,12 @@
 # OS_Nowa
 
-**Личная операционная система для работы с ИИ-агентом.** · **A personal productivity operating
-system any coding agent can run.**
+**A personal productivity operating system any coding agent can run.**
 
 ---
 
-## Установка
+## Install
 
-Откройте Claude Code (или другого агента) и вставьте этот текст одним сообщением:
+Open Claude Code (or another coding agent) and paste this in as one message:
 
 ```
 Set up OS_Nowa for me.
@@ -25,82 +24,25 @@ Set up OS_Nowa for me.
 Talk to me in the language I write to you in, from your very first reply.
 ```
 
-**Команда на английском — это нормально.** Ассистент прочитает её и заговорит с вами на вашем языке
-с первого же ответа. Ничего устанавливать не нужно, ключи и пароли не нужны.
-
 *Paste it as-is — the agent will reply in your language. Nothing to install, no keys, no account.*
 
 ---
 
-## Русский
-
-### Что это
-
-OS_Nowa — это папка с текстовыми файлами, устроенная так, что ИИ-агент может с ней работать: знает,
-кто вы, над чем вы работаете и куда что класть. Она заполняется вашими собственными материалами и
-становится тем полезнее, чем дольше вы ей пользуетесь. Всё лежит у вас на компьютере обычным
-текстом — ни аккаунта, ни подписки, ни синхронизации.
-
-### Что произойдёт после установки
-
-Агент проведёт вас через настройку — минут десять, разговором, без единой команды. Он спросит, чем
-вы занимаетесь и что для вас сейчас важно, и вместе с вами заведёт первую тему и запишет первое
-решение. В конце у вас будет не пустой каркас, а рабочее пространство с вашим собственным
-содержимым.
-
-### Что внутри
-
-- **Три уровня памяти.** Небольшой всегда загружаемый слой — кто вы и что важно. Каталог по каждой
-  теме. И сами материалы, которые открываются по одному. Смысл в том, чтобы агенту не приходилось
-  читать всё сразу.
-- **Четыре рабочих цикла.** Знания (по темам, с каталогом), задачи (один файл, только открытые),
-  проекты (сначала спецификация, потом код) и решения (только дополняется, никогда не переписывается).
-- **Шесть вещей, которые можно попросить.** Просто скажите их обычными словами — ничего не нужно
-  вводить особым образом, никаких слэшей и меню:
-  - *«настрой меня»* — первичная настройка (`onboard`)
-  - *«как это устроено?»* — объяснит любую часть системы, в любой момент (`explain`)
-  - *«проверь систему»* — скажет, не разъехалось ли что-нибудь (`os-health`)
-  - *«level up»* — превращает еженедельную рутину в автоматику (`level-up`)
-  - *«сделай из этого команду»* — создаёт новую такую команду (`create-skill`)
-  - *«почему ты это не нашёл?»* — если что-то не нашлось, чинит причину, а не симптом (`backtrack`)
-
-  Короткое имя в скобках тоже работает, если вам удобнее одно слово.
-
-### Честные границы
-
-- **Проверено** в Claude Code — установка и настройка проходят целиком, от вставки команды до
-  готового рабочего пространства.
-- **Структура и правила переносятся в другие агенты.** Здесь всё — обычный markdown, а `AGENTS.md` —
-  файл, который кодовые агенты читают по общему соглашению. Измерено в **Codex** (v0.146.0): новая
-  сессия на вопрос «на чём мне сегодня сосредоточиться» сама открыла три файла в `me/` и ответила по
-  ним — три запуска из трёх. **Cursor и Gemini следуют тому же соглашению, но не проверялись** —
-  считайте это вероятным, а не доказанным.
-- **Пять команд из шести работают в любом агенте, одна — нет.** Каждая из них — письменная процедура
-  в `system/procedures/`, на которую `AGENTS.md` указывает любому агенту. Исключение — *«сделай из
-  этого команду»*: она создаёт файл-скилл для Claude Code, поэтому имеет смысл только там, и **любая
-  команда, которую вы создадите сами, тоже работает только в Claude Code.** Всё остальное — кто вы,
-  над чем работаете, четыре рабочих цикла, правила хранения и остальные пять команд — переносится.
-- **Никаких интеграций в этой версии.** Ни почты, ни календаря, ни облака. Только папка с текстом.
-
----
-
-## English
-
-### What it is
+## What it is
 
 OS_Nowa is a folder of plain text files, arranged so that a coding agent can operate it: it knows who
 you are, what you are working toward, and where things belong. It fills up with your own material and
 gets more useful the longer you use it. Everything lives on your own machine as plain text — no
 account, no subscription, nothing synced anywhere.
 
-### What happens after you install it
+## What happens after you install it
 
 The agent walks you through setup — about ten minutes, as a conversation, with no commands to type.
 It asks what you do and what matters to you right now, and together you create your first subject
 area and log your first decision. You finish with a workspace holding your own content, not an empty
 skeleton.
 
-### What is inside
+## What is inside
 
 - **Three levels of memory.** A small always-loaded layer — who you are, what matters. A catalog per
   subject. And the material itself, opened one file at a time. The point is that the agent never has
@@ -119,7 +61,7 @@ skeleton.
 
   The short name in brackets works too, if you prefer typing one word.
 
-### Honest boundaries
+## Honest boundaries
 
 - **Tested** in Claude Code — install and setup run end to end, from a cold paste to a finished
   workspace.
@@ -141,10 +83,6 @@ skeleton.
 
 **MIT** — free to use, modify and distribute, **including commercially**, for anyone, with no fee and
 no permission needed. The full text is in [LICENSE](LICENSE).
-
-**MIT** — можно свободно пользоваться, изменять и распространять, **в том числе в коммерческих
-целях**, кому угодно, бесплатно и без отдельного разрешения. Полный текст — в файле
-[LICENSE](LICENSE).
 
 Built by **George Kachanouski**.
 
