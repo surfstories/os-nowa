@@ -334,6 +334,52 @@ inside the Tier 1 budget in `system/tiers.md`.
 If any of these is false, go back and finish it. **Do not declare onboarding complete on a workspace
 that is still empty** — that is the one failure this whole procedure exists to prevent.
 
+## Step 7b - Look at what you just built
+
+Optional, and offered the way every other choice here is offered. One warm line in their language:
+they made something in the last ten minutes, would they like to see it.
+
+```
+1) Yes, show me
+2) Skip it
+```
+
+**On `2`, go straight to Step 8.** No persuasion, no second ask.
+
+**Check for `node` before you promise anything.** If it is not there, say in one line that this last
+part needs Node and that everything else is already done, then go to Step 8. Offer no install, show
+no error text and start no troubleshooting. This is the last thing they see and it is not the place
+to debug a machine.
+
+**On `1`, render one page and open it** with `system/procedures/lavish.md`. It shows what is actually
+in the folder, and nothing else:
+
+- their name, and how they asked to be worked with
+- their three priorities, in the order they ranked them
+- the domain they created, with the page inside it
+- the decision they logged, with its **why**
+- the one open task, if there is one
+- where the folder now lives, and what they chose in Step 6c
+
+**Show what exists and nothing more.** No empty "recent activity", no placeholder chart, no heading
+with nothing under it. After ten minutes this workspace holds a profile, three priorities, one domain
+with one page, one decision and maybe one task, and the page's own framing is *"here is what you have
+after ten minutes"*, never *"here is your system"*. They can see the gap themselves, and a page that
+oversells it is the one thing that would make the last ten minutes feel like a demo.
+
+**If `tasks.md` is empty**, say so on the page in one line and say that it is normal. Step 6b ends
+with no task whenever nothing genuinely open came up, and that is a real outcome. **Never invent one
+to have something to draw**, for exactly the reason Step 6b gives.
+
+**Then say, in one line, what just happened.** The page they are looking at was made by the same
+system they can now ask for anything, and they can ask for another one at any time by saying *"show
+me this visually"*. That is the point of this step. Not the page: that they now know this exists.
+
+**End the session** with `end` when they are done looking, then continue to Step 8.
+
+**No rank card fires here either.** Five ranks stay five, and the champion card lands immediately
+after. The page is what makes it land.
+
 ## Step 8 — 🏆 Champion, and what happens now
 
 Fire the finale card. Then close with a few tight lines, in their language, and **no menu**:
