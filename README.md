@@ -15,10 +15,7 @@ Set up OS_Nowa for me.
 2. Get it there, then disconnect it — the workspace is mine, the local git history is my undo:
        git clone https://github.com/surfstories/os-nowa.git os-nowa
        cd os-nowa && git remote remove origin
-   No git? Don't install it. Download instead, then rename "os-nowa-main" to "os-nowa":
-       curl -L https://github.com/surfstories/os-nowa/archive/refs/heads/main.tar.gz -o os-nowa.tar.gz
-       tar -xzf os-nowa.tar.gz
-   If neither works, tell me what failed — don't guess.
+   If that fails, tell me what failed. Don't guess.
 3. Work from that folder: read AGENTS.md, then follow system/procedures/onboarding.md.
 
 Talk to me in the language I write to you in, from your very first reply.
