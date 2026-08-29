@@ -285,7 +285,21 @@ they can move it whenever they like and just open the new location next time.
 3. They create it and paste the address back. **Never ask for, type or store a password or a token.**
    Hard rule 5 above, and it is absolute here. If a push asks them to sign in, that is between them
    and GitHub, and you wait.
-4. Then:
+4. **Save what they just made, before anything goes anywhere.** Say it in their words rather than in
+   git's: everything from the last ten minutes is being written into the copy that travels to GitHub.
+   Then:
+
+   ```bash
+   git add -A
+   git commit -m "Onboarding: profile, priorities, first domain, first decision"
+   ```
+
+   **Skip this and the push works and carries none of their material.** Their profile, their
+   priorities, their domain, their decision and their task are all still sitting uncommitted, so what
+   lands on GitHub is the starter files and nothing of theirs. Nothing errors, and the repository
+   looks right until they open it. Check `git status --short` is empty before you push.
+
+5. Then:
 
    ```bash
    git remote add origin <the address they gave you>
@@ -293,9 +307,10 @@ they can move it whenever they like and just open the new location next time.
    ```
 
 **If `gh` is installed and already signed in**, you may offer the one-command form instead:
-`gh repo create <name> --private --source=. --push`. Detect it, do not install it, and never make
-signing in your job. `gh` ships with neither Claude Code nor Codex, so the browser path above is the
-real one and this is only a shortcut.
+`gh repo create <name> --private --source=. --push`. **Step 4 still happens first**; that command
+pushes what is committed and knows nothing about the rest. Detect `gh`, do not install it, and never
+make signing in your job. `gh` ships with neither Claude Code nor Codex, so the browser path above is
+the real one and this is only a shortcut.
 
 Then add the author's repository as `upstream`, so they can look at what changed later if they ever
 want to:
@@ -406,9 +421,11 @@ Fire the finale card. Then close with a few tight lines, in their language, and 
    spoken form is what a non-technical person will remember, and teaching two names for one thing
    without saying they are the same is how people conclude they have forgotten the right one.
 6. **Backup is already decided, so refer back to it rather than asking again.** If they pushed it to
-   their own private repository in Step 6c, say that a `git push` is how a day's work gets saved
-   there, and offer to show them once. If they kept it on this computer, remind them in one line
-   that moving the folder somewhere that syncs is the whole backup strategy, and that they can do
-   that whenever they like.
+   their own private repository in Step 6c, say the true thing: what is up there is a snapshot of
+   today, and it does not update itself. They never have to type anything for the next one. They say
+   *"back this up"* or *"save this to GitHub"* whenever they want, in ordinary words like everything
+   else here, and you save what has changed and send it. If they kept it on this computer, remind
+   them in one line that moving the folder somewhere that syncs is the whole backup strategy, and
+   that they can do that whenever they like.
 
 End on one encouraging line, in their language.
