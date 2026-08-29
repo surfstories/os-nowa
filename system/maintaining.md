@@ -48,6 +48,14 @@ Nothing in this file is loaded automatically. Read it when you are about to chan
    template: if it is wrong, the procedure that writes it is wrong. Fix the procedure and let it
    write the file again.
 
+10. **The version number at the top of `README.md` is bumped once per release.** The minor number
+    moves in the last commit of the release, and a release is whatever lands on `main` together.
+    Not once per commit: a release lands as several of them, and a per-commit rule would carry the
+    number from v1.2 to v1.11 inside a single release and make every commit touch a file it has no
+    business in. A number that is never bumped is worse than no number at all, because it tells a
+    user they are current at the moment they stop being current. There is no changelog and none is
+    coming: the number says that something newer exists, never what changed.
+
 ## Why this file exists
 
 Every other rule in this repository addresses the person using an installed workspace. Until this
