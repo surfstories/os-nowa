@@ -214,6 +214,103 @@ without this step onboarding demonstrates only three of them.
 If nothing genuinely open came up, say so and move on — an invented task is worse than an empty
 list, because the first thing they see next time is something they never asked for.
 
+## Step 6c - Cut it loose, and decide where it lives
+
+Two things, in this order. **The first one is not a choice and is not offered as one.**
+
+### First, the detach
+
+**Check whether this is the engine before you touch anything.** Somebody may be working on OS_Nowa
+itself in this folder, and taking the remote off their copy is the one mistake here that costs them
+something:
+
+```bash
+ENGINE_ROOT="$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")"
+test -f "$ENGINE_ROOT/.os-nowa-engine"
+```
+
+If that file is there, say in one line that this is a development copy of OS_Nowa itself, **touch no
+remote at all**, and go straight to the destination question below with only option 1 available. The
+flag is resolved through the common git dir on purpose: a linked worktree is a different directory
+that does not carry the marker but shares the same remote, so a check that looks where it is standing
+would find nothing and carry on. Rule 11 in `system/maintaining.md` owns this.
+
+If the folder is not a git repository at all, say that in one line, offer only option 1, and move on.
+
+**Otherwise, look at the remote and show them what you saw.**
+
+```bash
+git remote -v
+```
+
+**Show them the actual output.** Do not describe it from memory, and do not act on what you assume it
+says. Then decide from what it actually printed. There are three cases and all three happen:
+
+- **It points at `surfstories/os-nowa`** (in any form: SSH or HTTPS, with or without `.git`). Say in
+  one plain sentence why it is coming off: this folder is about to hold their profile, their
+  decisions and their own material, and it should not be pointed at somebody else's repository. Then
+  remove it: `git remote remove origin`. The install prompt normally does this already, so most of
+  the time you will find nothing here. This is the check that catches the times it did not.
+- **There is no remote.** Say so in one line and move on. Nothing to do.
+- **It points somewhere else.** This happens when they forked it, or cloned from a copy. **Do not
+  remove it silently.** Show them the address, say plainly that it is not the author's repository and
+  you do not know whose it is, and ask: `1)` leave it as it is · `2)` remove it. Taking somebody's
+  own remote off without asking is the same mistake as the one above, pointed the other way.
+
+### Then, where it lives
+
+A numbered menu, in their language:
+
+```
+1) Keep it here on this computer
+2) Push it to your own private repository on GitHub
+```
+
+**Option 1 - it stays here.** No remote is left at all. If you kept one in the previous step because
+they asked you to, say plainly that the folder is still connected to that address, and check once
+more that this is what they want.
+
+Then say this out loud, as a sentence, not as a footnote: **it is a folder, so moving it into
+somewhere that syncs (Google Drive, Dropbox, iCloud) is the whole backup strategy.** Moving it is
+theirs to do, not yours: the session is running inside this directory and would lose it. Tell them
+they can move it whenever they like and just open the new location next time.
+
+**Option 2 - their own private repository.**
+
+1. **Say why it has to be private, in terms of what is in the folder**: their profile, the decisions
+   they log, their own material. Not "best practice". This one.
+2. Send them to `https://github.com/new`. Tell them to set it to **Private**, and to create it
+   **empty**: no README, no `.gitignore`, no licence. An initialised repository will collide with
+   the history already in this folder.
+3. They create it and paste the address back. **Never ask for, type or store a password or a token.**
+   Hard rule 5 above, and it is absolute here. If a push asks them to sign in, that is between them
+   and GitHub, and you wait.
+4. Then:
+
+   ```bash
+   git remote add origin <the address they gave you>
+   git push -u origin main
+   ```
+
+**If `gh` is installed and already signed in**, you may offer the one-command form instead:
+`gh repo create <name> --private --source=. --push`. Detect it, do not install it, and never make
+signing in your job. `gh` ships with neither Claude Code nor Codex, so the browser path above is the
+real one and this is only a shortcut.
+
+Then add the author's repository as `upstream`, so they can look at what changed later if they ever
+want to:
+
+```bash
+git remote add upstream https://github.com/surfstories/os-nowa.git
+```
+
+**That address is written out here on purpose.** By the time this step runs the original remote has
+normally already been removed, so there is nothing left on disk to read it from.
+`system/conventions.md` forbids keeping a second copy of a fact, and this is the one named exception
+to it. Do not "fix" it into a lookup of a remote that no longer exists.
+
+**No rank card fires here.** There are five ranks and they stay five.
+
 ## Step 7 — Check your own work
 
 Before celebrating, verify every one of these, by actually looking:
@@ -226,6 +323,10 @@ Before celebrating, verify every one of these, by actually looking:
 5. `tasks.md` holds **one** open item — unless nothing genuinely open came up in Step 6b, which is a
    legitimate outcome. If you skipped it because you forgot rather than because there was nothing,
    go back and do it.
+6. **No remote points at the author's repository.** Run `git remote -v` again and read it. Nothing
+   called `origin` may point at `surfstories/os-nowa`. An `upstream` pointing there is correct after
+   option 2 in Step 6c, and a development copy carrying `.os-nowa-engine` correctly kept everything
+   it had: both of those pass.
 
 Also check that no `{{` placeholder survives anywhere, and that the three `me/` files together are
 inside the Tier 1 budget in `system/tiers.md`.
@@ -257,7 +358,10 @@ Fire the finale card. Then close with a few tight lines, in their language, and 
    are what the README lists, so mention once that the short name does the same thing — but the
    spoken form is what a non-technical person will remember, and teaching two names for one thing
    without saying they are the same is how people conclude they have forgotten the right one.
-6. **Back it up.** It is a folder. Putting it somewhere that syncs — or occasionally copying it — is
-   the whole backup strategy. Offer to explain if they want.
+6. **Backup is already decided, so refer back to it rather than asking again.** If they pushed it to
+   their own private repository in Step 6c, say that a `git push` is how a day's work gets saved
+   there, and offer to show them once. If they kept it on this computer, remind them in one line
+   that moving the folder somewhere that syncs is the whole backup strategy, and that they can do
+   that whenever they like.
 
 End on one encouraging line, in their language.
