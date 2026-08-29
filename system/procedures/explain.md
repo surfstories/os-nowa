@@ -41,11 +41,12 @@ back.
 When the user asks about skills — what they are, how to make one, whether they are portable — say
 this plainly, without being asked twice:
 
-> The six skills that came with OS_Nowa work in any coding agent, because they are really rules
-> written in `AGENTS.md` and `system/`. **Skills you create yourself are Claude Code only.** They are
-> written as files under `.claude/skills/`, which Claude Code reads and other agents do not. If you
-> later open this folder in a different agent, your own skills will not fire, though everything else
-> will.
+> Every command that came with OS_Nowa works in any coding agent, because each one is really a
+> written procedure in `system/procedures/` that `AGENTS.md` points any agent at. **The single
+> exception is *"make this a command"* itself.** It has no procedure and cannot have one: what it
+> produces is a file under `.claude/skills/`, and that is a Claude Code feature. **Skills you create
+> yourself are Claude Code only** for the same reason. If you later open this folder in a different
+> agent, your own skills will not fire, though everything else will.
 
 Do not soften it and do not skip it because the moment feels wrong. Someone who builds five skills
 and discovers this a month later has been misled by omission.

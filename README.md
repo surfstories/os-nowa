@@ -46,7 +46,7 @@ skeleton.
   to read everything to answer something.
 - **Four working loops.** Knowledge (by subject, catalogued), tasks (one file, open items only),
   projects (spec before build) and decisions (append-only, never rewritten).
-- **Six things you can ask for.** You just say them in ordinary words — there is nothing to type in a
+- **What you can ask for.** You just say them in ordinary words. There is nothing to type in a
   special way, no slash, no menu:
   - *"set me up"* — first-time setup (`onboard`)
   - *"how does this work?"* — explains any part of it, at any moment (`explain`)
@@ -67,11 +67,11 @@ skeleton.
   session asked "what should I focus on today" opened the three `me/` files on its own and answered
   from them, three runs out of three. **Cursor and Gemini follow the same convention but have not been
   measured** — treat them as likely, not proven.
-- **Five of the six commands work in any agent; one does not.** Each is a written procedure in
+- **Every command works in any agent except one.** Each is a written procedure in
   `system/procedures/`, which `AGENTS.md` points any agent at. The exception is *"make this a
-  command"* — it writes a Claude Code skill file, so it only means anything in Claude Code, and **any
-  command you create yourself is likewise Claude Code only.** Everything else — who you are, what you
-  are working toward, the four loops, the filing rules and the other five commands — travels.
+  command"*: it writes a Claude Code skill file, so it only means anything in Claude Code, and **any
+  command you create yourself is likewise Claude Code only.** Everything else travels: who you are,
+  what you are working toward, the four loops, the filing rules and the rest of the commands.
 - **No integrations in this version.** No mail, no calendar, no cloud. Just a folder of text.
 
 ---

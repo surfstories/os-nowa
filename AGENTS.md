@@ -41,7 +41,7 @@ assistant that has never heard of them. That is also the *only* symptom of being
 so the greeting is what makes a silent failure visible. Skip it and the user has no evidence the
 system works — and no reason to come back to it rather than to any other chat window.
 
-## The six things the user can ask for
+## What the user can ask for
 
 They ask in ordinary words, in their own language. There is no syntax — no slash, no menu. When one
 of these comes up, **open the procedure and follow it**; do not work from memory of what it probably
@@ -193,7 +193,7 @@ say "an engine path" points here rather than writing the paths out again.
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
 folder. Nothing in an update will ever touch these.
 
-**A skill the user made is theirs, not ours.** An update replaces only the six skills OS_Nowa ships
+**A skill the user made is theirs, not ours.** An update replaces only the skills OS_Nowa ships
 with; any other folder under `.claude/skills/` is left exactly as it is. Say this when you write one,
 so nobody builds five skills on the assumption that the next version keeps them, and so nobody
 deletes one believing it was part of the product.
