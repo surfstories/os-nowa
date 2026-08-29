@@ -178,8 +178,9 @@ those are written once and read for years, and by then they mean nothing.
 sentence there makes the file unauditable while looking filled in. "Not yet" is prose. An absent
 field is honest and reads correctly; a wrong date does not.
 
-## The README is bilingual, and both halves change together
+## README is English only
 
-`README.md` carries Russian first, then English. **Any change touches both halves in the same
-commit.** A fix applied to one half only is worse than no fix: six weeks later the two contradict
-each other and neither is obviously the right one.
+`README.md` is written in English and carries no second language. It used to carry Russian first and
+English after, and every edit had to be made twice or the two halves drifted apart with nothing to
+say which one was right. Anyone who needs another language makes their own copy; the file itself
+stays single.

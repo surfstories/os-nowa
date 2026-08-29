@@ -14,9 +14,10 @@ particular phrase, and then tells the agent what to do.
 The user is about to invest in something with a boundary, and they should know where it is **before**
 they build, not after:
 
-> Skills are a **Claude Code** feature. The six skills OS_Nowa came with work in any coding agent,
-> because they are really rules written in `AGENTS.md` and `system/`. A skill you create is a file
-> that only Claude Code reads — if you open this folder in a different agent, it will not fire.
+> Skills are a **Claude Code** feature. Every command OS_Nowa came with works in any coding agent,
+> because each one is really a written procedure in `system/procedures/`. The single exception is
+> this one, *"make this a command"*, which has no procedure and cannot have one. A skill you create
+> is a file that only Claude Code reads: open this folder in a different agent and it will not fire.
 >
 > If that matters to you, the alternative is a **written procedure** in the relevant domain. Any
 > agent can follow it; you just have to point at it rather than saying a word.
