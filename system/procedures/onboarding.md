@@ -338,7 +338,8 @@ that is still empty** — that is the one failure this whole procedure exists to
 
 Fire the finale card. Then close with a few tight lines, in their language, and **no menu**:
 
-1. **It's yours.** Everything here is plain text on their own machine. No account, nothing synced.
+1. **It's yours.** Everything here is plain text on their own machine. No account, and nothing is
+   sent anywhere on its own.
 2. **How to come back tomorrow — say this concretely, and do not assume they know it.** Tell them the
    actual folder path, in full, and that the way back in is to open a new session *in that folder*.
    Give them the literal command if they use a terminal, and say plainly that a conversation started
