@@ -56,6 +56,30 @@ Nothing in this file is loaded automatically. Read it when you are about to chan
     user they are current at the moment they stop being current. There is no changelog and none is
     coming: the number says that something newer exists, never what changed.
 
+11. **Mark your engine checkout, and let onboarding see the mark.** Create an empty
+    `.os-nowa-engine` in the root of the checkout you develop in. It is gitignored, so it never
+    reaches a user, and it exists only where you made it. Step 6c of
+    `system/procedures/onboarding.md` looks for it and refuses to touch any remote when it is there.
+
+    Without it, an onboarding run inside this repository removes its own `origin`, which points at
+    `surfstories/os-nowa`. That is recoverable by re-adding the remote, but only by someone who
+    notices, and nothing errors. It has already nearly happened: onboarding was run end to end
+    inside a linked worktree of this repository on 2026-08-29.
+
+    Resolve the location through the common git dir, never with a plain `test -f` against the
+    current directory. A linked worktree is a different directory and does not carry the marker,
+    but it shares the same `origin`, so a check that looks where it is standing finds nothing and
+    proceeds:
+
+    ```bash
+    ENGINE_ROOT="$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")"
+    test -f "$ENGINE_ROOT/.os-nowa-engine"
+    ```
+
+    `--path-format=absolute` is not decoration. Without it `git rev-parse --git-common-dir` prints
+    a relative `.git` in the main checkout, `dirname` returns `.`, and the check silently starts
+    depending on where the session happens to be standing.
+
 ## Why this file exists
 
 Every other rule in this repository addresses the person using an installed workspace. Until this

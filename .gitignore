@@ -5,3 +5,8 @@ _trash/
 # Machine-local marker, not part of the product. An empty file some Claude Code
 # setups drop here to permit edits in a primary checkout. Never yours to commit.
 .claude/.allow-primary-edits
+
+# Marks this checkout as the engine, not somebody's workspace. Onboarding looks
+# for it and refuses to touch remotes when it is there. Gitignored so it never
+# reaches a user; see rule 11 in system/maintaining.md.
+.os-nowa-engine
