@@ -80,6 +80,16 @@ Nothing in this file is loaded automatically. Read it when you are about to chan
     a relative `.git` in the main checkout, `dirname` returns `.`, and the check silently starts
     depending on where the session happens to be standing.
 
+12. **Moving the `lavish-axi` pin is a vendor update, never a free upgrade.** The version is pinned
+    in the house rules of `system/procedures/lavish.md`. Bumping it means reading what changed in
+    that release first, the same as any other dependency. Without a pin, a folder holding somebody's
+    profile and decisions runs whatever the registry serves that day, chosen by nobody.
+
+    **Refreshing the vendored text in that file overwrites the house rules with it.** The pin, the
+    `share` confirmation and the loopback rule all go at once, nothing errors, and the file still
+    reads as correct. Re-add them deliberately, in the same commit as the refresh. There is no
+    linter here to catch their loss, and that is weaker than it sounds.
+
 ## Why this file exists
 
 Every other rule in this repository addresses the person using an installed workspace. Until this

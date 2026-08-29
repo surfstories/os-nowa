@@ -10,3 +10,8 @@ _trash/
 # for it and refuses to touch remotes when it is there. Gitignored so it never
 # reaches a user; see rule 11 in system/maintaining.md.
 .os-nowa-engine
+
+# Throwaway HTML pages written by system/procedures/lavish.md. They can render
+# the user's own material, and branch 2 of onboarding Step 6c pushes this folder
+# to their private repository.
+.lavish/
