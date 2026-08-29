@@ -218,6 +218,11 @@ list, because the first thing they see next time is something they never asked f
 
 Two things, in this order. **The first one is not a choice and is not offered as one.**
 
+**Both halves of this step are things you say, not things you do quietly.** The commands are one
+line each; everything of value here is what the user actually hears. A summary of this step reads
+as though it went fine and leaves them knowing neither what was attached to their folder nor how to
+keep a copy of it.
+
 ### First, the detach
 
 **Check whether this is the engine before you touch anything.** Somebody may be working on OS_Nowa
@@ -246,11 +251,20 @@ git remote -v
 **Show them the actual output.** Do not describe it from memory, and do not act on what you assume it
 says. Then decide from what it actually printed. There are three cases and all three happen:
 
-- **It points at `surfstories/os-nowa`** (in any form: SSH or HTTPS, with or without `.git`). Say in
-  one plain sentence why it is coming off: this folder is about to hold their profile, their
-  decisions and their own material, and it should not be pointed at somebody else's repository. Then
-  remove it: `git remote remove origin`. The install prompt normally does this already, so most of
-  the time you will find nothing here. This is the check that catches the times it did not.
+- **It points at `surfstories/os-nowa`** (in any form: SSH or HTTPS, with or without `.git`).
+  **Paste the two lines the command printed, then say why it is coming off, then remove it.** All
+  three, in that order, translated into their language:
+
+  > `origin  git@github.com:surfstories/os-nowa.git`
+  >
+  > *"This is still pointed at the repository OS_Nowa came from. That folder is about to hold your
+  > profile, your decisions and your own material, so it should not be attached to somebody else's
+  > repository. Taking it off now."*
+
+  Then `git remote remove origin`. **"Disconnected, done" is not this step.** Somebody who never
+  sees the address cannot tell whether anything was there, and this step exists precisely for the
+  installs where the address was still there and nobody noticed. The install prompt normally removes
+  it already, so most of the time you will find nothing and say so.
 - **There is no remote.** Say so in one line and move on. Nothing to do.
 - **It points somewhere else.** This happens when they forked it, or cloned from a copy. **Do not
   remove it silently.** Show them the address, say plainly that it is not the author's repository and
@@ -270,10 +284,19 @@ A numbered menu, in their language:
 they asked you to, say plainly that the folder is still connected to that address, and check once
 more that this is what they want.
 
-Then say this out loud, as a sentence, not as a footnote: **it is a folder, so moving it into
-somewhere that syncs (Google Drive, Dropbox, iCloud) is the whole backup strategy.** Moving it is
-theirs to do, not yours: the session is running inside this directory and would lose it. Tell them
-they can move it whenever they like and just open the new location next time.
+**Then say the backup sentence. It is not optional and it is not a footnote.** Say it here, in
+their language, before you move on:
+
+> *"One thing worth knowing: this is just a folder. Putting it somewhere that syncs, Google Drive
+> or Dropbox or iCloud, is the whole backup strategy. Move it whenever you like and open the new
+> location next time."*
+
+Moving it is theirs to do, not yours: the session is running inside this directory and would lose
+it.
+
+**This is the only backup a user without a GitHub account will ever get**, which is why it is
+written out rather than left to judgement. Step 8 refers back to it later; that is a reminder, not
+a substitute, and a user who reads only this step must still have heard it.
 
 **Option 2 - their own private repository.**
 
