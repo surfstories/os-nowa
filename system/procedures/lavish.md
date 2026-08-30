@@ -55,8 +55,8 @@ will tell you once you run it.
    2. Say in one line what is about to happen: another Lavish server is already running on this
       machine, it is listening beyond this computer, and you are going to stop it. Stopping it ends
       any other Lavish review open here, which is why you say it before you do it.
-   3. Run `npx -y lavish-axi@0.1.62 stop`, render again with the variable, and confirm the new `url`
-      is loopback.
+   3. Run `LAVISH_AXI_HOST=127.0.0.1 npx -y lavish-axi@0.1.62 stop`, render again with the variable,
+      and confirm the new `url` is loopback.
    4. **Never hand the user a link whose host is not `127.0.0.1`.**
 
 4. **Artifacts go in `.lavish/`**, which is gitignored. Never into a domain folder: a throwaway page
