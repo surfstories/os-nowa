@@ -194,8 +194,12 @@ say "an engine path" points here rather than writing the paths out again.
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
 folder. Nothing in an update will ever touch these.
 
-**`.lavish/` is neither.** It is gitignored throwaway output from *"show me this visually"*, owned by
-nobody, and safe to delete at any moment.
+**`.lavish/` is neither.** It is gitignored throwaway output from *"show me this visually"*,
+regenerated on demand and owned by nobody. It is **the one named exception to hard rule 4**: it may
+be deleted outright rather than moved to `_trash/`, and naming it as an exception here is what keeps
+that rule absolute everywhere else. **Never while a review is open on it** - deleting the page
+somebody is annotating kills their browser session and gains nothing, and nothing else in this
+folder behaves that way.
 
 **A skill the user made is theirs, not ours.** An update replaces only the skills OS_Nowa ships
 with; any other folder under `.claude/skills/` is left exactly as it is. Say this when you write one,
