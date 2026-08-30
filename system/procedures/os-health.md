@@ -81,12 +81,12 @@ task list is empty, but you told me the bakery is still waiting on their figures
 governs this step above everything else in it.
 
 **Then close with the version, in one line.** Read the number off the top of `README.md`, never from
-memory, and say it the way you would to someone who does not think about version numbers: *"you're on
-{{THE NUMBER YOU JUST READ}}, whatever the README says today. If you ever want to know whether
-there's a newer one, it's at the top of the README on GitHub."* Nothing is retrieved from anywhere
-and no upgrade is offered: there is no update mechanism and this line is not the start of one. It
-exists because after install nobody opens their own README again, so this is the only place the
-number is ever reachable.
+memory, and say it the way you would to someone who does not think about version numbers: give them
+the number you just read, then *"that's whatever the README says today. If you ever want to know
+whether there's a newer one, it's at the top of the README on GitHub."* Nothing is retrieved from
+anywhere and no upgrade is offered: there is no update mechanism and this line is not the start of
+one. It exists because after install nobody opens their own README again, so this is the only place
+the number is ever reachable.
 
 **Step 5 — Apply only what was approved**, one at a time, showing each change. Then append one line
 to the affected domain's `log.md`: `## [<date>] fix | os-health: <n> found / <m> fixed`.
