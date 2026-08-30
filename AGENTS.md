@@ -194,16 +194,20 @@ say "an engine path" points here rather than writing the paths out again.
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
 folder. Nothing in an update will ever touch these.
 
+**`.lavish/` is neither.** It is gitignored throwaway output from *"show me this visually"*, owned by
+nobody, and safe to delete at any moment.
+
 **A skill the user made is theirs, not ours.** An update replaces only the skills OS_Nowa ships
 with; any other folder under `.claude/skills/` is left exactly as it is. Say this when you write one,
 so nobody builds five skills on the assumption that the next version keeps them, and so nobody
 deletes one believing it was part of the product.
 
-**Onboarding never writes to an engine path.** It fills `me/`, creates the user's first domain, and
-writes to `decisions.md` — and that is all. The temptation to "adjust `AGENTS.md` to this user" is
-exactly what this rule forbids: the moment onboarding edits the engine, the user's own work becomes
-unupdatable. If something about the engine seems wrong for a user, that is a note in
-`decisions.md`, not an edit.
+**Onboarding never writes to an engine path.** It fills `me/`, creates the user's first domain,
+writes to `decisions.md` and `tasks.md`, and - only in its last step, and only if the user says yes -
+leaves a throwaway page under `.lavish/`. That is all, ever. It never deletes anything, so it never
+creates `_trash/`. The temptation to "adjust `AGENTS.md` to this user" is exactly what this rule
+forbids: the moment onboarding edits the engine, the user's own work becomes unupdatable. If
+something about the engine seems wrong for a user, that is a note in `decisions.md`, not an edit.
 
 The same rule binds you in normal work. If you believe an engine file should change, say so and let
 the user decide. Do not edit it as a side effect of another task.
