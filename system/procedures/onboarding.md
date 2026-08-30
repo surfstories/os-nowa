@@ -303,7 +303,7 @@ they can move it whenever they like and just open the new location next time.
 
    ```bash
    git remote add origin <the address they gave you>
-   git push -u origin main
+   git push -u origin "$(git branch --show-current)"
    ```
 
 **If `gh` is installed and already signed in**, you may offer the one-command form instead:
