@@ -41,10 +41,11 @@ will tell you once you run it.
 
 3. **Set the host every time, and check the address that came back.** Put
    `LAVISH_AXI_HOST=127.0.0.1` in front of every `lavish-axi` call, `poll`, `end` and `export`
-   included, and never point it anywhere but loopback. By default the server binds loopback and,
-   when Tailscale is running, this machine's Tailscale IPv4 as well; the variable turns that second
-   bind off. It is unauthenticated and it serves local files, and this folder holds the user's
-   profile, their decisions and their material.
+   included, and never point it anywhere but loopback. In full, a render is
+   `LAVISH_AXI_HOST=127.0.0.1 npx -y lavish-axi@0.1.62 <html-file>`, and every other call takes the
+   same prefix. By default the server binds loopback and, when Tailscale is running, this machine's
+   Tailscale IPv4 as well; the variable turns that second bind off. It is unauthenticated and it
+   serves local files, and this folder holds the user's profile, their decisions and their material.
 
    **Setting it is not sufficient on its own.** The server is a background daemon that outlives one
    command, and the variable is read only by the invocation that starts it. Against a daemon that is
