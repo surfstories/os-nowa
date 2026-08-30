@@ -79,8 +79,9 @@ will tell you once you run it.
 7. **Never run `lavish-axi setup`.** 0.1.62 ships `setup hooks`, which installs session hooks into
    Claude Code, Codex, OpenCode and GitHub Copilot CLI, and `setup plugin`, which registers the
    package as an agent plugin in VS Code, Cursor and Copilot CLI. **Both write outside this folder,
-   into the user's agent configuration**, and nothing in OS_Nowa may do that. Running `--help` is
-   how you would now find that they exist, which is why this rule arrives with this release.
+   into the user's agent configuration**, and nothing in OS_Nowa may do that. Both subcommands are
+   real and `--help` does not list them, so nothing you can run will warn you they are there. That is
+   why the rule is written down here rather than left to be found.
 
 # Lavish Editor
 
