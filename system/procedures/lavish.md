@@ -39,8 +39,25 @@ will tell you once you run it.
    knowing that. When somebody asks "can I send this to someone", the answer is `export`, which
    writes them a single portable file they can send themselves.
 
-3. **Never point `LAVISH_AXI_HOST` off loopback.** The server is unauthenticated and serves local
-   files, and this folder holds the user's profile, their decisions and their material.
+3. **Set the host every time, and check the address that came back.** Put
+   `LAVISH_AXI_HOST=127.0.0.1` in front of every `lavish-axi` call, `poll`, `end` and `export`
+   included, and never point it anywhere but loopback. By default the server binds loopback and,
+   when Tailscale is running, this machine's Tailscale IPv4 as well; the variable turns that second
+   bind off. It is unauthenticated and it serves local files, and this folder holds the user's
+   profile, their decisions and their material.
+
+   **Setting it is not sufficient on its own.** The server is a background daemon that outlives one
+   command, and the variable is read only by the invocation that starts it. Against a daemon that is
+   already running it is ignored, silently, exit 0, and the page opens anyway. So:
+
+   1. **Read the `url` the command printed.** If its host is not `127.0.0.1`, an older daemon is
+      serving and the variable did nothing.
+   2. Say in one line what is about to happen: another Lavish server is already running on this
+      machine, it is listening beyond this computer, and you are going to stop it. Stopping it ends
+      any other Lavish review open here, which is why you say it before you do it.
+   3. Run `npx -y lavish-axi@0.1.62 stop`, render again with the variable, and confirm the new `url`
+      is loopback.
+   4. **Never hand the user a link whose host is not `127.0.0.1`.**
 
 4. **Artifacts go in `.lavish/`**, which is gitignored. Never into a domain folder: a throwaway page
    sitting there reads as an owned page, and an owned page owes an index row and a log line it will
