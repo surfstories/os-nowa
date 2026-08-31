@@ -1,6 +1,6 @@
 # OS_Nowa
 
-**v1.2**
+**v1.3**
 
 **A personal productivity operating system any coding agent can run.**
 

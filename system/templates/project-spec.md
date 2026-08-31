@@ -1,5 +1,5 @@
 ---
-title: {{PROJECT_NAME}} — spec
+title: {{PROJECT_NAME}} - spec
 status: proposed | agreed | building | done | abandoned
 updated: {{YYYY-MM-DD}}
 ---
@@ -8,7 +8,7 @@ updated: {{YYYY-MM-DD}}
 
 ## The problem
 
-{{WHAT_IS_ACTUALLY_WRONG_TODAY — the problem, not the solution. If this section describes a feature,
+{{WHAT_IS_ACTUALLY_WRONG_TODAY. The problem, not the solution. If this section describes a feature,
 the interview has not happened yet.}}
 
 ## What it does
@@ -34,7 +34,7 @@ and a project without edges never finishes.}}
 
 ## How it will be verified
 
-{{THE_CHECK_THAT_PROVES_IT_WORKS — written BEFORE building, not after. "Try it and see" is not a
+{{THE_CHECK_THAT_PROVES_IT_WORKS. Written BEFORE building, not after. "Try it and see" is not a
 verification. Name the command, the observation, or the person who confirms.}}
 
 **Result of that verification:** {{FILLED_IN_AFTER_BUILDING}}

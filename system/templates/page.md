@@ -9,7 +9,7 @@ authoritative: yes | no
 
 # {{TITLE}}
 
-{{THE_POINT_OF_THIS_PAGE_IN_ONE_OR_TWO_LINES — enough that someone who opened it by mistake knows
+{{THE_POINT_OF_THIS_PAGE_IN_ONE_OR_TWO_LINES. Enough that someone who opened it by mistake knows
 immediately whether to keep reading.}}
 
 ## {{SECTION}}
