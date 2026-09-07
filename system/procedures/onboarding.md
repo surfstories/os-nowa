@@ -251,7 +251,7 @@ says. Then decide from what it actually printed. There are three cases and all t
 - **It points at `surfstories/os-nowa`** (in any form: SSH or HTTPS, with or without `.git`). Say in
   one plain sentence why it is coming off: this folder is about to hold their profile, their
   decisions and their own material, and it should not be pointed at somebody else's repository. Then
-  remove it: `git remote remove origin`. The install prompt normally does this already, so most of
+  remove it: `git remote remove origin`. The install command normally does this already, so most of
   the time you will find nothing here. This is the check that catches the times it did not.
 - **There is no remote.** Say so in one line and move on. Nothing to do.
 - **It points somewhere else.** This happens when they forked it, or cloned from a copy. **Do not

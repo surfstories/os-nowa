@@ -6,23 +6,19 @@
 
 ## Install
 
-Open Claude Code (or another coding agent) and paste this in as one message:
+One command. It puts the folder in your home directory, cuts it loose from this repository so the
+history inside it is yours, and opens your agent in it:
 
-```
-Set up OS_Nowa for me.
-
-1. Ask where to put it. Default: a folder called "os-nowa" in my home directory.
-2. Get it there, then disconnect it — the workspace is mine, the local git history is my undo:
-       git clone https://github.com/surfstories/os-nowa.git os-nowa
-       cd os-nowa && git remote remove origin
-   If that fails, tell me what failed. Don't guess.
-3. Work from that folder: read AGENTS.md, then follow system/procedures/onboarding.md.
-
-Talk to me in the language I write to you in, from your very first reply.
+```bash
+git clone https://github.com/surfstories/os-nowa.git ~/os-nowa && cd ~/os-nowa && git remote remove origin && claude
 ```
 
-*Paste it as-is. The agent will reply in your language. There is no account to make and no key to
-paste.*
+Then say **"set me up"**, in whatever language you speak. Setup is a conversation of about ten
+minutes with no commands to type, and the agent answers in your language from its first reply. There
+is no account to make and no key to paste.
+
+Using something other than Claude Code: replace the last word with `codex`, `cursor-agent` or
+`gemini`. Want the folder somewhere else: change both paths.
 
 ---
 

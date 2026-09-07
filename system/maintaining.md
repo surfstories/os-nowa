@@ -15,8 +15,8 @@ Nothing in this file is loaded automatically. Read it when you are about to chan
    line. The person who approved the change is its author.
 
 3. **Every engine change is acceptance-tested before it lands.** Clone the branch to a fresh folder,
-   open a new session in it, and run the affected path the way a new user would: paste the install
-   prompt, say "set me up", say "check my system". The PR body records what was run and what
+   open a new session in it, and run the affected path the way a new user would: run the install
+   command, say "set me up", say "check my system". The PR body records what was run and what
    happened. Reading the diff is not a test of a system whose whole failure mode is invisible from
    disk.
 
