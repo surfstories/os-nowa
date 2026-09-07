@@ -82,4 +82,4 @@ Every run ends with all three, or it is not finished:
   one that works.
 - **It does not push past a gate.** An exit at Gate 1 is the most valuable result this procedure
   produces, not a failed run.
-- **It does not run itself.** There is no schedule anywhere in OS_nowa. Someone has to ask.
+- **It does not run itself.** There is no schedule anywhere in OS-nowa. Someone has to ask.

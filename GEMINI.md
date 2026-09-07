@@ -1,4 +1,4 @@
-# OS_nowa
+# OS-nowa
 
 The instructions for this folder are in `AGENTS.md`. Read it now, in full, before doing anything.
 

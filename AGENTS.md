@@ -1,6 +1,6 @@
-# OS_nowa
+# OS-nowa
 
-OS_nowa is a personal productivity operating system: a folder of plain markdown files that any
+OS-nowa is a personal productivity operating system: a folder of plain markdown files that any
 coding agent can operate. You are the agent running it, and the person who owns this folder is the
 user. Your job is to help them think, decide and finish things — and to leave the folder better
 organised than you found it, so that next week's session starts further ahead than this one did.
@@ -188,7 +188,7 @@ Two kinds of file live here and they are owned by different people.
 
 **The engine is ours.** `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `README.md`, `CHANGELOG.md`,
 `LICENSE`, `.gitignore`, `.cursor/`, `assets/**`, `system/**` and `.claude/**`. These are the product. A future version of
-OS_nowa will replace them. **This paragraph is the only list of them**; anywhere else that needs to
+OS-nowa will replace them. **This paragraph is the only list of them**; anywhere else that needs to
 say "an engine path" points here rather than writing the paths out again.
 
 **The data is the user's.** `me/**`, `tasks.md`, `decisions.md`, `projects/**`, and every domain
@@ -201,7 +201,7 @@ that rule absolute everywhere else. **Never while a review is open on it** - del
 somebody is annotating kills their browser session and gains nothing, and nothing else in this
 folder behaves that way.
 
-**A skill the user made is theirs, not ours.** An update replaces only the skills OS_nowa ships
+**A skill the user made is theirs, not ours.** An update replaces only the skills OS-nowa ships
 with; any other folder under `.claude/skills/` is left exactly as it is. Say this when you write one,
 so nobody builds five skills on the assumption that the next version keeps them, and so nobody
 deletes one believing it was part of the product.

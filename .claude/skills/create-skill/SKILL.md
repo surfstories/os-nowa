@@ -1,6 +1,6 @@
 ---
 name: create-skill
-description: Turn something the user repeats into a one-word command. Use when they say "make a skill", "create a skill", "turn this into a command", or describe a task they want to trigger by a phrase. The user may say this in any language. Interviews for the essentials, then writes .claude/skills/<name>/SKILL.md. Tell them up front that skills are Claude Code only — the rest of OS_nowa works in any agent, but a skill they create here will not fire elsewhere.
+description: Turn something the user repeats into a one-word command. Use when they say "make a skill", "create a skill", "turn this into a command", or describe a task they want to trigger by a phrase. The user may say this in any language. Interviews for the essentials, then writes .claude/skills/<name>/SKILL.md. Tell them up front that skills are Claude Code only — the rest of OS-nowa works in any agent, but a skill they create here will not fire elsewhere.
 autonomy: 2  # drafts the skill file; the user approves before it is written
 ---
 
@@ -14,7 +14,7 @@ particular phrase, and then tells the agent what to do.
 The user is about to invest in something with a boundary, and they should know where it is **before**
 they build, not after:
 
-> Skills are a **Claude Code** feature. Every command OS_nowa came with works in any coding agent,
+> Skills are a **Claude Code** feature. Every command OS-nowa came with works in any coding agent,
 > because each one is really a written procedure in `system/procedures/`. The single exception is
 > this one, *"make this a command"*, which has no procedure and cannot have one. A skill you create
 > is a file that only Claude Code reads: open this folder in a different agent and it will not fire.
