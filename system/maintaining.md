@@ -48,13 +48,18 @@ Nothing in this file is loaded automatically. Read it when you are about to chan
    template: if it is wrong, the procedure that writes it is wrong. Fix the procedure and let it
    write the file again.
 
-10. **The version number at the top of `README.md` is bumped once per release.** The minor number
-    moves in the last commit of the release, and a release is whatever lands on `main` together.
-    Not once per commit: a release lands as several of them, and a per-commit rule would carry the
-    number from v1.2 to v1.11 inside a single release and make every commit touch a file it has no
-    business in. A number that is never bumped is worse than no number at all, because it tells a
-    user they are current at the moment they stop being current. There is no changelog and none is
-    coming: the number says that something newer exists, never what changed.
+10. **The version lives in `CHANGELOG.md` and nowhere else.** The top entry is the current
+    version. It is written once per release, in the last commit of that release, and a release is
+    whatever lands on `main` together. Not once per commit: a release lands as several of them, and
+    a per-commit rule would carry the number from v1.2 to v1.11 inside a single release and make
+    every commit touch a file it has no business in. A number that is never bumped is worse than no
+    number at all, because it tells a user they are current at the moment they stop being current.
+
+    **`README.md` carries no number.** It used to carry one at the top, and there was deliberately
+    no changelog, so the number told a user that something newer existed but never what changed. A
+    changelog line costs the same to write and answers both questions, so the number moved and the
+    README lost it. One home and one copy: a version written in two files gets bumped in one of
+    them, and nothing warns you.
 
 11. **Mark your engine checkout, and let onboarding see the mark.** Create an empty
     `.os-nowa-engine` in the root of the checkout you develop in. It is gitignored, so it never
