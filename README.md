@@ -1,7 +1,7 @@
 # OS_Nowa
 
 <p align="center">
-  <img src="assets/os-nowa-hero.png" alt="A beaver in a hard hat setting an orange block into the unfinished top course of a stone foundation, with a lit desk and a card index already standing on the finished part" width="640">
+  <img src="assets/os-nowa-hero.png" alt="Two pixel-art beavers on a log dam, one reading a tablet and one working on a laptop, with a coffee and a sandwich beside them; the dam holds back a lake made of the digits 0 and 1 and a stream of them flows on through it" width="640">
 </p>
 
 <p align="center">
