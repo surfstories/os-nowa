@@ -53,7 +53,6 @@ says.
 | "how does this work?", "explain" | `system/procedures/explain.md` |
 | "check my system", "os-health" | `system/procedures/os-health.md` |
 | "level up", "what should I automate?" | `system/procedures/level-up.md` |
-| "why didn't you find that?", "backtrack" | `system/procedures/backtrack.md` |
 | "draw this", "show me this visually", "make a page out of it" | `system/procedures/lavish.md` |
 | "make this a command" | Claude Code only — see below |
 

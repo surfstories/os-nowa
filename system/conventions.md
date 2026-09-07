@@ -132,7 +132,6 @@ owner instead.
 | The index row length | `system/tiers.md` |
 | The list of engine paths | `AGENTS.md`, under "Engine and data" |
 | The five log operation words | this file, under "`log.md` - the format" |
-| The five classes of miss | `system/procedures/backtrack.md` |
 | The register to speak in | `AGENTS.md`, hard rule 8 |
 | The em dash ban | `AGENTS.md`, hard rule 6 |
 | The autonomy scale | this file, under "The autonomy scale" |
