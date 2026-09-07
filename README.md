@@ -1,8 +1,11 @@
 # OS_Nowa
 
-**A personal productivity operating system any coding agent can run.**
+**Your context in one folder, arranged so a coding agent can actually read it.**
 
----
+Plain markdown on your own machine. No account, no key, no cloud.
+
+The better the context an agent has, the better the work it gives back. OS_Nowa is where that
+context lives, and it gets more useful the longer you use it.
 
 ## Install
 
@@ -20,74 +23,100 @@ is no account to make and no key to paste.
 Using something other than Claude Code: replace the last word with `codex`, `cursor-agent` or
 `gemini`. Want the folder somewhere else: change both paths.
 
----
-
-## What it is
-
-OS_Nowa is a folder of plain text files, arranged so that a coding agent can operate it: it knows who
-you are, what you are working toward, and where things belong. It fills up with your own material and
-gets more useful the longer you use it. Everything lives on your own machine as plain text, with no
-account and no subscription, and nothing leaves it unless you ask for that by name.
-
-## What happens after you install it
-
-The agent walks you through setup — about ten minutes, as a conversation, with no commands to type.
-It asks what you do and what matters to you right now, and together you create your first subject
-area and log your first decision. You finish with a workspace holding your own content, not an empty
-skeleton.
-
 ## What is inside
 
-- **Three levels of memory.** A small always-loaded layer — who you are, what matters. A catalog per
-  subject. And the material itself, opened one file at a time. The point is that the agent never has
-  to read everything to answer something.
-- **Four working loops.** Knowledge (by subject, catalogued), tasks (one file, open items only),
-  projects (spec before build) and decisions (append-only, never rewritten).
-- **What you can ask for.** You just say them in ordinary words. There is nothing to type in a
-  special way, no slash, no menu:
-  - *"set me up"* — first-time setup (`onboard`)
-  - *"how does this work?"* — explains any part of it, at any moment (`explain`)
-  - *"check my system"* — tells you whether anything has drifted (`os-health`)
-  - *"level up"* — turns one weekly chore into something automatic (`level-up`)
-  - *"make this a command"* — creates a new one of these (`create-skill`)
-  - *"why didn't you find that?"* — when something was missed, fixes the cause rather than the
-    symptom (`backtrack`)
-  - *"show me this visually"* turns whatever you are looking at into a page in your browser, where
-    you can mark up the part that is wrong and send the note straight back (`lavish`)
+- **Three levels of memory.** A small always-loaded layer, a catalog per subject, and the material
+  itself opened one file at a time. The agent never reads everything to answer something.
+- **Four loops, running by default.** Knowledge filed by subject and catalogued. Tasks in one file,
+  open items only. Projects specced before they are built. Decisions appended, never rewritten.
+- **Seven things to ask for, in ordinary words.** No slash, no menu, no syntax.
+- **Yours to keep.** Plain markdown, local git history as your undo, and nothing addressed to
+  another person is sent without you seeing it first.
 
-  The short name in brackets works too, if you prefer typing one word.
+## What it looks like
 
-## Honest boundaries
+```
+os-nowa/
+├── me/            who you are, what you are working toward, what this can reach
+├── tasks.md       open items only
+├── decisions.md   append-only: what you settled, and why
+├── projects/      one folder each, spec before build
+├── <subject>/     any area you keep material on
+│   ├── index.md   the catalog: read first, it says which page is worth opening
+│   ├── log.md     append-only, newest at the bottom
+│   ├── sources/   raw material you handed over. Read, never edited.
+│   └── pages/     what the agent wrote: summaries, notes, syntheses
+└── system/        the rules the folder runs on
+```
 
-- **Tested** in Claude Code — install and setup run end to end, from a cold paste to a finished
-  workspace.
-- **The structure and the rules travel to other agents.** Everything here is plain markdown, and
-  `AGENTS.md` is the file coding agents read by convention. Measured in **Codex** (v0.146.0): a fresh
-  session asked "what should I focus on today" opened the three `me/` files on its own and answered
-  from them, three runs out of three. **Cursor and Gemini follow the same convention but have not been
-  measured** — treat them as likely, not proven.
-- **Every command works in any agent except one.** Each is a written procedure in
-  `system/procedures/`, which `AGENTS.md` points any agent at. The exception is *"make this a
-  command"*: it writes a Claude Code skill file, so it only means anything in Claude Code, and **any
-  command you create yourself is likewise Claude Code only.** Everything else travels: who you are,
-  what you are working toward, the four loops, the filing rules and the rest of the commands.
-- **One part needs Node installed. Nothing else needs anything.** Everything here is plain markdown
-  that a coding agent reads. The exception is *"show me this visually"*, which opens the page in
-  your browser through `lavish-axi`, an MIT tool by Kun Chen that runs on Node. Without Node every
-  other part works exactly the same and that one step is skipped. Still no mail, no calendar and no
-  cloud.
-- **Nothing leaves your machine unless you ask for it by name.** That page is served locally. It can
-  also be published to a third-party site, which puts it behind a link anyone can open unless you
-  set a password, and the agent will never do that on its own initiative.
+`me/` is the always-loaded level, `index.md` is the catalog, and everything else is opened only when
+it is needed. That split is what keeps the folder answerable once it holds a year of your material.
 
----
+## What you can ask for
+
+| Say something like | What it does |
+|---|---|
+| "set me up" | First-time setup. Ten minutes, as a conversation. |
+| "how does this work?" | Explains any part of it, at any moment. |
+| "check my system" | Tells you whether anything has drifted. |
+| "level up" | Turns one weekly chore into something automatic. |
+| "why didn't you find that?" | Fixes the cause of a miss rather than the symptom. |
+| "show me this visually" | Turns what you are looking at into a page in your browser, where you can mark up the part that is wrong and send the note straight back. |
+| "make this a command" | Creates a new one of these. Claude Code only. |
+
+Their short names work too, if you would rather type one word: `onboard`, `explain`, `os-health`,
+`level-up`, `backtrack`, `lavish`, `create-skill`.
+
+## Why a folder
+
+Plain markdown in a folder has two properties nothing else has at once: you can read it, and so can
+any agent, on any machine, with no service in between. What is usually missing is the arrangement.
+Which file is always in context and which is only a catalog. Where a new thing goes. What gets
+written down when something is decided. Without that, an agent reads everything or finds nothing.
+OS_Nowa is that arrangement, and the arrangement is the product.
+
+## Which agents it runs on
+
+| Agent | Status |
+|---|---|
+| **Claude Code** | **Tested.** Install and setup run end to end, from a cold command to a finished workspace. |
+| **Codex** (v0.146.0) | **Measured.** Asked "what should I focus on today", a fresh session opened the three `me/` files unprompted and answered from them. Three runs out of three. |
+| Cursor, Gemini CLI | Follow the same convention, **not measured.** Treat as likely, not proven. |
+
+`AGENTS.md` is the file coding agents read by convention, and the commands are written procedures in
+`system/procedures/`, so the structure and the rules travel. One exception: *"make this a command"*
+writes a Claude Code skill file, so it, and anything you create with it, is Claude Code only.
+
+## Limits worth knowing before you start
+
+- **Nothing leaves your machine unless you ask for it by name.** Emails, messages and posts are
+  drafted and shown to you. The agent does not send.
+- **Your undo is the local git history**, and you will not be committing to it, so assume anything
+  written since has none. The agent never deletes: it moves to `_trash/`.
+- **No secrets belong in the folder.** No passwords, no keys, no tokens, anywhere in it.
+- **One part needs Node.** *"Show me this visually"* serves the page through
+  [`lavish-axi`](https://www.npmjs.com/package/lavish-axi), an MIT tool by Kun Chen. Without Node
+  everything else works the same and that one step is skipped. The page is served locally, and
+  publishing it is a separate thing you have to ask for.
+
+## Documentation
+
+| | |
+|---|---|
+| [`AGENTS.md`](./AGENTS.md) | What the agent reads: the levels, the loops, the hard rules, the routing |
+| [`system/tiers.md`](./system/tiers.md) | Why three levels, and why the always-loaded one stays small |
+| [`system/conventions.md`](./system/conventions.md) | Where a new thing goes, and what a catalog row has to say |
+| [`system/learn/`](./system/learn/) | Walkthroughs: the first week, adding a subject area |
+| [`system/procedures/`](./system/procedures/) | The commands written out. Six of the seven are here; *create-skill* is a skill file only. |
+| [`system/maintaining.md`](./system/maintaining.md) | Rules for changing OS_Nowa itself |
+| [`CHANGELOG.md`](./CHANGELOG.md) | The version you are on, and what changed in it |
 
 ## Licence and author
 
-**MIT** — free to use, modify and distribute, **including commercially**, for anyone, with no fee and
-no permission needed. The full text is in [LICENSE](LICENSE).
+**MIT** - free to use, modify and distribute, including commercially, for anyone, with no fee and no
+permission needed. The full text is in [LICENSE](LICENSE).
 
 Built by **George Kachanouski**.
 
-- LinkedIn — https://www.linkedin.com/in/georgekachanouski
-- Facebook — https://www.facebook.com/george.kachanouski
+- LinkedIn - https://www.linkedin.com/in/georgekachanouski
+- Facebook - https://www.facebook.com/george.kachanouski
