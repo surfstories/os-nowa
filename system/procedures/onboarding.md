@@ -222,7 +222,7 @@ Two things, in this order. **The first one is not a choice and is not offered as
 
 ### First, the detach
 
-**Check whether this is the engine before you touch anything.** Somebody may be working on OS_Nowa
+**Check whether this is the engine before you touch anything.** Somebody may be working on OS_nowa
 itself in this folder, and taking the remote off their copy is the one mistake here that costs them
 something:
 
@@ -231,7 +231,7 @@ ENGINE_ROOT="$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)
 test -f "$ENGINE_ROOT/.os-nowa-engine"
 ```
 
-If that file is there, say in one line that this is a development copy of OS_Nowa itself, **touch no
+If that file is there, say in one line that this is a development copy of OS_nowa itself, **touch no
 remote at all**, and go straight to the destination question below with only option 1 available. The
 flag is resolved through the common git dir on purpose: a linked worktree is a different directory
 that does not carry the marker but shares the same remote, so a check that looks where it is standing

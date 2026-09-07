@@ -1,12 +1,12 @@
 ---
 name: explain
-description: Explain how OS_Nowa itself works — what the three tiers are and why, what a domain is, where a new thing should go, why the always-loaded files must stay small, what a skill is. Use when the user asks "how does this work", "why is it set up like this", "where should this go", "what is a domain", "what are the tiers", or seems unsure what the system is doing. The user may say this in any language. Teaches from system/tiers.md and system/conventions.md; read-only.
+description: Explain how OS_nowa itself works — what the three tiers are and why, what a domain is, where a new thing should go, why the always-loaded files must stay small, what a skill is. Use when the user asks "how does this work", "why is it set up like this", "where should this go", "what is a domain", "what are the tiers", or seems unsure what the system is doing. The user may say this in any language. Teaches from system/tiers.md and system/conventions.md; read-only.
 autonomy: 3  # reads and explains; changes nothing
 ---
 
 ## What this does
 
-Explains how OS_Nowa itself works, from the written material rather than from memory.
+Explains how OS_nowa itself works, from the written material rather than from memory.
 
 **The method is in `system/procedures/explain.md`. Read it and follow it.**
 

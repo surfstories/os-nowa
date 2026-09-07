@@ -1,4 +1,4 @@
-# Maintaining OS_Nowa - rules for changing the engine
+# Maintaining OS_nowa - rules for changing the engine
 
 These rules bind whoever changes the engine: the files listed as engine paths in `AGENTS.md`, under
 "Engine and data". They do not bind a session working in someone's installed workspace. Those rules

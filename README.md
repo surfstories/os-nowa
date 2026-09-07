@@ -1,4 +1,4 @@
-# OS_Nowa
+# OS_nowa
 
 <p align="center">
   <img src="assets/os-nowa-hero.png" alt="Two pixel-art beavers on a log dam, one reading a tablet and one working on a laptop, with a coffee and a sandwich beside them; the dam holds back a lake made of the digits 0 and 1 and a stream of them flows on through it" width="640">
@@ -9,7 +9,7 @@
   <sub>Plain markdown on your own machine. No account, no key, no cloud.</sub>
 </p>
 
-The better the context an agent has, the better the work it gives back. OS_Nowa is where that
+The better the context an agent has, the better the work it gives back. OS_nowa is where that
 context lives, and it gets more useful the longer you use it.
 
 ## Install
@@ -78,7 +78,7 @@ Plain markdown in a folder has two properties nothing else has at once: you can 
 any agent, on any machine, with no service in between. What is usually missing is the arrangement.
 Which file is always in context and which is only a catalog. Where a new thing goes. What gets
 written down when something is decided. Without that, an agent reads everything or finds nothing.
-OS_Nowa is that arrangement, and the arrangement is the product.
+OS_nowa is that arrangement, and the arrangement is the product.
 
 ## Which agents it runs on
 
@@ -113,7 +113,7 @@ writes a Claude Code skill file, so it, and anything you create with it, is Clau
 | [`system/conventions.md`](./system/conventions.md) | Where a new thing goes, and what a catalog row has to say |
 | [`system/learn/`](./system/learn/) | Walkthroughs: the first week, adding a subject area |
 | [`system/procedures/`](./system/procedures/) | The commands written out. Six of the seven are here; *create-skill* is a skill file only. |
-| [`system/maintaining.md`](./system/maintaining.md) | Rules for changing OS_Nowa itself |
+| [`system/maintaining.md`](./system/maintaining.md) | Rules for changing OS_nowa itself |
 | [`CHANGELOG.md`](./CHANGELOG.md) | The version you are on, and what changed in it |
 
 ## Licence and author
