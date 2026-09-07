@@ -17,6 +17,8 @@ Newest first. One heading per release, and a release is whatever landed on `main
 - **The version moved into this file.** It used to sit at the top of `README.md` and say only that
   something newer existed, never what changed. `os-health` now reads the number from here.
 - **The product is spelled `OS-nowa`**, matching the wordmark and the repository. It was `OS_Nowa`.
+- **The README says why this was built**, in the author's own words, instead of arguing the case for
+  a folder in the abstract.
 
 ## v1.3
 
