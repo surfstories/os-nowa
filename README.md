@@ -119,7 +119,7 @@ writes a Claude Code skill file, so it, and anything you create with it, is Clau
 | [`AGENTS.md`](./AGENTS.md) | What the agent reads: the levels, the loops, the hard rules, the routing |
 | [`system/tiers.md`](./system/tiers.md) | Why three levels, and why the always-loaded one stays small |
 | [`system/conventions.md`](./system/conventions.md) | Where a new thing goes, and what a catalog row has to say |
-| [`system/learn/`](./system/learn/) | Walkthroughs: the first week, adding a subject area |
+| [`system/learn/`](./system/learn/) | Walkthroughs: the first week, adding a subject area, bringing in context you already have |
 | [`system/procedures/`](./system/procedures/) | The commands written out. Five of the six are here; *create-skill* is a skill file only. |
 | [`system/maintaining.md`](./system/maintaining.md) | Rules for changing OS-nowa itself |
 | [`CHANGELOG.md`](./CHANGELOG.md) | The version you are on, and what changed in it |
