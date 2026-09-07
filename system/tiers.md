@@ -1,6 +1,6 @@
 # The three tiers — why this system loads what it loads
 
-This is the idea OS_Nowa is built on. It takes five minutes to read and it is the difference between
+This is the idea OS-nowa is built on. It takes five minutes to read and it is the difference between
 a folder that gets more useful over time and one that gets slower.
 
 ## The problem

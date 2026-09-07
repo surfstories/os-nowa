@@ -7,7 +7,7 @@ either way — only the trigger differs.
 
 ## What this does
 
-Acts as the tutor for the system itself. The user learns OS_Nowa by using it, which means the
+Acts as the tutor for the system itself. The user learns OS-nowa by using it, which means the
 questions arrive in the middle of other work — this procedure answers them without derailing that work.
 
 **Teach from the source, not from memory.** The material is:
@@ -41,7 +41,7 @@ back.
 When the user asks about skills — what they are, how to make one, whether they are portable — say
 this plainly, without being asked twice:
 
-> Every command that came with OS_Nowa works in any coding agent, because each one is really a
+> Every command that came with OS-nowa works in any coding agent, because each one is really a
 > written procedure in `system/procedures/` that `AGENTS.md` points any agent at. **The single
 > exception is *"make this a command"* itself.** It has no procedure and cannot have one: what it
 > produces is a file under `.claude/skills/`, and that is a Claude Code feature. **Skills you create

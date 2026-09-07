@@ -222,7 +222,7 @@ Two things, in this order. **The first one is not a choice and is not offered as
 
 ### First, the detach
 
-**Check whether this is the engine before you touch anything.** Somebody may be working on OS_Nowa
+**Check whether this is the engine before you touch anything.** Somebody may be working on OS-nowa
 itself in this folder, and taking the remote off their copy is the one mistake here that costs them
 something:
 
@@ -231,7 +231,7 @@ ENGINE_ROOT="$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)
 test -f "$ENGINE_ROOT/.os-nowa-engine"
 ```
 
-If that file is there, say in one line that this is a development copy of OS_Nowa itself, **touch no
+If that file is there, say in one line that this is a development copy of OS-nowa itself, **touch no
 remote at all**, and go straight to the destination question below with only option 1 available. The
 flag is resolved through the common git dir on purpose: a linked worktree is a different directory
 that does not carry the marker but shares the same remote, so a check that looks where it is standing
@@ -251,7 +251,7 @@ says. Then decide from what it actually printed. There are three cases and all t
 - **It points at `surfstories/os-nowa`** (in any form: SSH or HTTPS, with or without `.git`). Say in
   one plain sentence why it is coming off: this folder is about to hold their profile, their
   decisions and their own material, and it should not be pointed at somebody else's repository. Then
-  remove it: `git remote remove origin`. The install prompt normally does this already, so most of
+  remove it: `git remote remove origin`. The install command normally does this already, so most of
   the time you will find nothing here. This is the check that catches the times it did not.
 - **There is no remote.** Say so in one line and move on. Nothing to do.
 - **It points somewhere else.** This happens when they forked it, or cloned from a copy. **Do not

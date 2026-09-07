@@ -34,7 +34,7 @@ It then offers a fix list. It applies nothing until the user approves each item.
 ## Steps
 
 **Step 1 — Find the domains.** Every top-level folder that is not `system/`, `.claude/`, `.cursor/`,
-`me/`, `projects/` or `_trash/` is a domain. Also list any folder that is *pointed at* by an index or
+`assets/`, `me/`, `projects/` or `_trash/` is a domain. Also list any folder that is *pointed at* by an index or
 by `AGENTS.md` but has **no** `index.md` or `log.md` — those are findings, not folders to skip. A
 scan that silently excludes the least-catalogued folders will always report the workspace as clean.
 
@@ -80,13 +80,13 @@ task list is empty, but you told me the bakery is still waiting on their figures
 `tasks.md` has 0 open items."* Group by what it means to them, not by failure mode. Hard rule 6
 governs this step above everything else in it.
 
-**Then close with the version, in one line.** Read the number off the top of `README.md`, never from
-memory, and say it the way you would to someone who does not think about version numbers: give them
-the number you just read, then *"that's whatever the README says today. If you ever want to know
-whether there's a newer one, it's at the top of the README on GitHub."* Nothing is retrieved from
-anywhere and no upgrade is offered: there is no update mechanism and this line is not the start of
-one. It exists because after install nobody opens their own README again, so this is the only place
-the number is ever reachable.
+**Then close with the version, in one line.** Read it off the top entry of `CHANGELOG.md`, never
+from memory, and say it the way you would to someone who does not think about version numbers: give
+them the number you just read, then *"that's whatever the changelog says today. If you ever want to
+know whether there's a newer one, and what changed in it, that's the top of CHANGELOG.md on
+GitHub."* Nothing is retrieved from anywhere and no upgrade is offered: there is no update mechanism
+and this line is not the start of one. It exists because after install nobody opens their own
+changelog again, so this is the only place the number is ever reachable.
 
 **Step 5 — Apply only what was approved**, one at a time, showing each change. Then append one line
 to the affected domain's `log.md`: `## [<date>] fix | os-health: <n> found / <m> fixed`.

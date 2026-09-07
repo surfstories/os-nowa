@@ -1,6 +1,6 @@
 ---
 name: onboard
-description: Set up OS_Nowa for the first time. Use when the folder is new, when me/profile.md still says "Status: not yet filled in", or when the user says "onboard me", "set me up", "get me started". The user may say this in any language — detect it from their first message and run the whole thing in that language. A warm, non-technical interview that fills in who the user is, builds their first real domain from their own answers, and teaches the system as it goes. Idempotent — safe to re-run.
+description: Set up OS-nowa for the first time. Use when the folder is new, when me/profile.md still says "Status: not yet filled in", or when the user says "onboard me", "set me up", "get me started". The user may say this in any language — detect it from their first message and run the whole thing in that language. A warm, non-technical interview that fills in who the user is, builds their first real domain from their own answers, and teaches the system as it goes. Idempotent — safe to re-run.
 autonomy: 1  # asks before every change; the user is the verifier
 ---
 
@@ -34,7 +34,7 @@ rather than declaring it done.
 
 ## What this skill does not do
 
-- **It does not connect anything.** OS_Nowa ships with no integrations. If the user wants a service
+- **It does not connect anything.** OS-nowa ships with no integrations. If the user wants a service
   connected, that is their own setup, and it earns a row in `me/connections.md` afterwards.
 - **It does not fill the system with example content.** Every artifact it creates comes from the
   user's own answers. An empty domain the user has to delete is worse than no domain.

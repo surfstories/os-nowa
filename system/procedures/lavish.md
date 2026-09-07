@@ -64,7 +64,7 @@ will tell you once you run it.
    sitting there reads as an owned page, and an owned page owes an index row and a log line it will
    never earn.
 
-5. **Node is required, and this is the only part of OS_Nowa that needs anything installed.** If
+5. **Node is required, and this is the only part of OS-nowa that needs anything installed.** If
    `node` is not there, say so in one line and do the thing in plain text instead. Do not offer to
    install it and do not turn the request into a troubleshooting session. **The same one line covers
    a CLI you cannot reach at all** - offline, behind a proxy, or in a sandbox where `npx -y` exits
@@ -80,7 +80,7 @@ will tell you once you run it.
 7. **Never run `lavish-axi setup`.** 0.1.62 ships `setup hooks`, which installs session hooks into
    Claude Code, Codex, OpenCode and GitHub Copilot CLI, and `setup plugin`, which registers the
    package as an agent plugin in VS Code, Cursor and Copilot CLI. **Both write outside this folder,
-   into the user's agent configuration**, and nothing in OS_Nowa may do that. Both subcommands are
+   into the user's agent configuration**, and nothing in OS-nowa may do that. Both subcommands are
    real and `--help` does not list them, so nothing you can run will warn you they are there. That is
    why the rule is written down here rather than left to be found.
 
