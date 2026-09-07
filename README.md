@@ -72,13 +72,22 @@ it is needed. That split is what keeps the folder answerable once it holds a yea
 Their short names work too, if you would rather type one word: `onboard`, `explain`, `os-health`,
 `level-up`, `backtrack`, `lavish`, `create-skill`.
 
-## Why a folder
+## Why I built this
 
-Plain markdown in a folder has two properties nothing else has at once: you can read it, and so can
-any agent, on any machine, with no service in between. What is usually missing is the arrangement.
-Which file is always in context and which is only a catalog. Where a new thing goes. What gets
-written down when something is decided. Without that, an agent reads everything or finds nothing.
-OS-nowa is that arrangement, and the arrangement is the product.
+Every session with an agent started the same way: who I am, what I do, what I am trying to get done.
+To avoid saying it a third time I would go and find the old chat where I had already said it, and
+carry on in there. My context was not a memory. It was a set of browser tabs whose location I had to
+remember.
+
+The second problem was next-door projects. When two of them overlapped I had to dictate the overlap
+by hand every time: what touches what, why it matters, which file to open. Nothing in the projects
+themselves said any of that, so nothing could be picked up on its own.
+
+The third was the agents. Left to decide for themselves, they wrote my context down a different way
+each time: this project in one shape, the next in another. No single note was wrong, and nothing
+could be found twice.
+
+So I made a folder, and I wrote the rules for how things get into it. That is what OS-nowa is.
 
 ## Which agents it runs on
 
