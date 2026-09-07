@@ -34,7 +34,7 @@ It then offers a fix list. It applies nothing until the user approves each item.
 ## Steps
 
 **Step 1 — Find the domains.** Every top-level folder that is not `system/`, `.claude/`, `.cursor/`,
-`me/`, `projects/` or `_trash/` is a domain. Also list any folder that is *pointed at* by an index or
+`assets/`, `me/`, `projects/` or `_trash/` is a domain. Also list any folder that is *pointed at* by an index or
 by `AGENTS.md` but has **no** `index.md` or `log.md` — those are findings, not folders to skip. A
 scan that silently excludes the least-catalogued folders will always report the workspace as clean.
 

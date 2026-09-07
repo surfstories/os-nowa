@@ -1,8 +1,13 @@
 # OS_Nowa
 
-**Your context in one folder, arranged so a coding agent can actually read it.**
+<p align="center">
+  <img src="assets/os-nowa-hero.png" alt="A beaver in a hard hat setting an orange block into the unfinished top course of a stone foundation, with a lit desk and a card index already standing on the finished part" width="640">
+</p>
 
-Plain markdown on your own machine. No account, no key, no cloud.
+<p align="center">
+  <b>Your context in one folder, arranged so a coding agent can actually read it.</b><br>
+  <sub>Plain markdown on your own machine. No account, no key, no cloud.</sub>
+</p>
 
 The better the context an agent has, the better the work it gives back. OS_Nowa is where that
 context lives, and it gets more useful the longer you use it.
