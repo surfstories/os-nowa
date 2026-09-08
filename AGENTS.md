@@ -12,8 +12,18 @@ language.
 
 ## First run
 
-If `me/profile.md` says **Status: not yet filled in**, this folder has never been set up. Say so
-warmly in one line and offer to start — then read
+**A stub profile is not always a new workspace.** If `me/profile.md` says **Status: not yet filled
+in**, that is normally a fresh install, but it is also true in a checkout of OS-nowa itself, where
+the stub is a shipped fixture. Check before you offer anything: `git remote get-url origin` pointing
+at `surfstories/os-nowa` means this is the product, not somebody's folder. **That remote is the whole
+test.** A fresh install keeps this repository's own commit history, so history, branch names and an
+empty-looking `me/` prove nothing either way: with no such remote, offer setup rather than asking.
+Then do not greet and do
+not offer setup - read `system/maintaining.md`, which owns what applies instead, and do the task you
+were given. If nobody gave you one, say in one line what you saw and ask which it is. Onboarding a
+folder still wired to the author's repository is the failure this check prevents.
+
+Otherwise this folder has never been set up. Say so warmly in one line and offer to start, then read
 `system/procedures/onboarding.md` and follow it. Do not begin any other work until the user has
 either finished onboarding or explicitly declined it.
 
