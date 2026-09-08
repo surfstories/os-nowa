@@ -4,6 +4,16 @@ The version lives here and nowhere else. The top entry is what you are on.
 
 Newest first. One heading per release, and a release is whatever landed on `main` together.
 
+## v1.5
+
+- **The `lavish-axi` pin moved from 0.1.62 to 0.1.67.** Five upstream releases, all small: an agent
+  presence fix across overlapping polls, an attachment upload fix behind a reverse proxy, a switch
+  from per-tab event streams to one WebSocket so several open review boards stay responsive, a
+  tracked-batch pattern in the input playbook, and polls that return instead of hanging when the last
+  review window disconnects. Nothing touched host binding, `share` or `setup`. The four pinned
+  invocations and the taken-on date moved; the vendored text below the house rules was deliberately
+  not refreshed.
+
 ## v1.4
 
 - **Install is one command.** `git clone ... && cd ... && git remote remove origin && claude`
