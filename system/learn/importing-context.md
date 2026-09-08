@@ -70,6 +70,8 @@ rather than all of them now.
 ## What happens to what you bring back
 
 The paste is kept **exactly as it arrived**, in `imported/sources/`, and nothing edits it afterwards.
+The one exception is a credential. If the note carries a password, a key or a token, that is taken out
+before anything is written and the line says what was removed: nothing in this folder holds a secret.
 Then it is read once and its headings are filed:
 
 | Heading | Where it goes |

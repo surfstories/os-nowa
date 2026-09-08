@@ -140,10 +140,13 @@ benefit a second time, and do not ask again later in the run.
 
 ### What to do with a paste
 
-1. **Keep it exactly as it arrived.** Write it verbatim to
+1. **Keep it exactly as it arrived, with one exception.** Write it verbatim to
    `imported/sources/<YYYY-MM-DD>-<where-from>.md`. Do not tidy it, shorten it or correct it. It is
    the record of what came from where, and every later question about why a fact is in the workspace
-   is answered by it.
+   is answered by it. **A secret is the one thing you take out.** A chat is exactly where a password,
+   an API key or a token gets pasted, and hard rule 3 in `AGENTS.md` forbids writing one into this
+   folder. Replace it with `[removed: what it was]`, say in one line that you did, and do not carry it
+   anywhere else in the workspace. Read the paste before you write it, not after.
 2. **Give `imported/` its catalog** from `system/templates/`, and say in its index, in one line, that
    this is a holding area and not a subject: material moves out of it into the areas it belongs to,
    and the paste stays behind as the record.
