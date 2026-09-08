@@ -26,7 +26,9 @@ Nothing here needs a terminal, an account, a key or an install.
 4. **Never write to an engine path.** `AGENTS.md` lists them, under "Engine and data"; that list is
    the only one. Onboarding writes to `me/`, to one new domain folder, to `decisions.md`, to
    `tasks.md`, and - only in Step 7b, and only if the user says yes - to a throwaway page under
-   `.lavish/`. Nothing else, ever. Onboarding never deletes anything, so it never creates `_trash/`.
+   `.lavish/`. **If Step 1b brings a paste in, it also writes to `imported/`, and to the areas the
+   filing table on that page names, `projects/` among them.** Nothing else, ever. Onboarding never
+   deletes anything, so it never creates `_trash/`.
    If it seems useful to "adapt the instructions to this user", that is exactly the thing this rule
    forbids: it would make their workspace impossible to update later.
 5. **Never ask for a password, an API key or a token.** None is needed for any of this.
@@ -104,9 +106,74 @@ I only touch files in this folder, and I'll always ask first."*
 **🥚 Start the game** — one light line telling them they are starting as 🥚 **Rookie** (`▱▱▱▱▱ 0/5`)
 and you will level them up as you go. No box yet.
 
+## Step 1b - Bring in the context they already have
+
+Most people arrive with years of context already sitting in chat threads and in Claude Projects.
+Retyping it is the reason a folder like this usually starts empty and stays that way. Two pastes here
+are worth more than any answer they could give to a question, so this step comes before the
+interview rather than after it.
+
+**The method, and both prompts, are in `system/learn/importing-context.md`. Open it and follow it.**
+Do not retype a prompt from memory: the headings in them are fixed on purpose, and a prompt with
+different headings produces a paste that cannot be filed.
+
+Ask two things, one at a time, each as a numbered menu.
+
+**First:** *"Have you been talking to AI assistants in chats, like ChatGPT, Claude or Gemini?"*
+`1)` yes · `2)` no
+
+If yes, give them the chat prompt in a code block they can copy whole, one line on what it does, and
+one line on what to do with the answer. Then wait. They are going off to another window, so say
+plainly that you will be here when they get back and that they can bring as many threads as they
+like.
+
+**Then:** *"Do you use Projects in Claude?"* `1)` yes · `2)` no
+
+If yes, give them the project prompt from the same page, and say one project at a time.
+
+**If both answers are no, say one warm line and go straight to Step 2.** Nothing is lost: the
+interview fills the same files from their own words instead. Do not push it, do not explain the
+benefit a second time, and do not ask again later in the run.
+
+**No rank card fires in this step.** A profile written from a paste is not confirmed yet, and 🎒
+**Explorer** is earned when the user has looked at it and said it is right, which happens in Step 2.
+
+### What to do with a paste
+
+1. **Keep it exactly as it arrived, with one exception.** Write it verbatim to
+   `imported/sources/<YYYY-MM-DD>-<where-from>.md`. Do not tidy it, shorten it or correct it. It is
+   the record of what came from where, and every later question about why a fact is in the workspace
+   is answered by it. **A secret is the one thing you take out.** A chat is exactly where a password,
+   an API key or a token gets pasted, and hard rule 3 in `AGENTS.md` forbids writing one into this
+   folder. Replace it with `[removed: what it was]`, say in one line that you did, and do not carry it
+   anywhere else in the workspace. Read the paste before you write it, not after.
+2. **Give `imported/` its catalog** from `system/templates/`, and say in its index, in one line, that
+   this is a holding area and not a subject: material moves out of it into the areas it belongs to,
+   and the paste stays behind as the record.
+3. **Read it once and file it by heading**, using the table on that page. Show the whole plan first,
+   in their language, as a short list of what goes where. Write it on a yes.
+4. **Never fill in the gaps.** The prompt told the other assistant to write "nothing here" rather
+   than guess. A heading with nothing under it means the material does not exist, so leave it empty
+   and let Step 2 ask about it. Hard rule 5 in `AGENTS.md` binds here exactly as everywhere else, and
+   a paste is not permission to infer.
+
+**Every later step that finds its file already filled becomes a confirmation.** Steps 2, 4, 5 and 6
+each write something, and a paste may have written it already. Where it has, show what is there and
+ask whether it is right, then move on. Do not ask as though nothing existed: that is the same form
+twice. Do not skip the step silently either, because the user has not seen that file yet and its rank
+has not been earned. The line at the top of this file about skipping past what is filled in is about
+**re-running** onboarding on a workspace already in use; inside one run, a filled file gets looked at.
+
 ## Step 2 — Who they are (three questions, not an interview)
 
-Ask these one at a time. Keep it light — this is not a form.
+**If Step 1b brought something in, this step is a confirmation and not an interview.** Show them what
+you already have about them, drawn from what they pasted, as a short list they can correct: who they
+are, what they work on, how they like to be worked with. Then ask one question: *"anything wrong or
+missing?"* After that, ask only the questions the paste left unanswered. Somebody who has just handed
+over their whole context and is then asked what they do for a living has been made to fill the same
+form twice.
+
+**If nothing was brought in, ask all three below, one at a time.** Keep it light - this is not a form.
 
 1. **"What do you actually spend your days on?"** Work, studies, running something, several things.
 2. **"What would you most like a hand with?"** Offer a menu: `1)` keeping track of things ·
@@ -417,11 +484,15 @@ Fire the finale card. Then close with a few tight lines, in their language, and 
 3. **It compounds.** Every subject they add and every decision they log makes the next conversation
    start further ahead.
 4. **One task, one new conversation.** Fresh chat per thing.
-5. **Three things to remember they can say — and say plainly that ordinary words are how you ask for
+5. **The things to remember they can say - and say plainly that ordinary words are how you ask for
    anything here.** There is nothing to type in a special way, no slash and no menu.
    - *"how does this work?"* — any time, about any part of it
    - *"level up"* — once a week, to turn one repeated chore into something automatic
    - *"check my system"* — every few weeks, to catch anything that has drifted
+
+   If they turned down the import in Step 1b, or brought in one thread out of several, add a fourth:
+   *"I want to bring in context from another chat"*, any time. It is the cheapest way this folder
+   gets better and it does not need setup run again.
 
    **Use these wordings, not the short names.** `explain`, `level-up` and `os-health` also work and
    are what the README lists, so mention once that the short name does the same thing — but the

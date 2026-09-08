@@ -6,6 +6,15 @@ Newest first. One heading per release, and a release is whatever landed on `main
 
 ## v1.5
 
+- **Setup brings in the context you already have, before it asks you anything.** After your name, it
+  asks whether you have been talking to assistants in chats, and whether you use Claude Projects. For
+  each yes it hands you a prompt to paste over there, and what comes back fills in your profile, your
+  priorities, your decisions and your open items. The interview that follows becomes a confirmation of
+  what is already there rather than a form. Answer no to both and setup runs exactly as it did before.
+- **A new page, `system/learn/importing-context.md`**, holds both prompts and where each heading gets
+  filed. It can be run at any time, not only during setup, so context can be brought over in pieces.
+  Nothing is automated and nothing is granted access: you move the text yourself, by copy and paste.
+- **The `backtrack` command is removed**, along with its procedure and every row that pointed at it.
 - **The `lavish-axi` pin moved from 0.1.62 to 0.1.67.** Five upstream releases: an agent presence
   fix across overlapping polls, an attachment upload fix behind a reverse proxy, a tracked-batch
   pattern in the input playbook, and polls that return instead of hanging when the last review
@@ -33,7 +42,7 @@ Newest first. One heading per release, and a release is whatever landed on `main
 
 ## v1.3
 
-- The three tiers, the four loops and the six commands, as shipped.
+- The three tiers, the four loops and the seven commands, as shipped.
 
 *Entries before v1.4 are a single line because no changelog was kept at the time. The number was
 carried at the top of `README.md` and said only that something newer existed, never what changed.

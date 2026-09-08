@@ -10,6 +10,7 @@ invented rule becomes real the moment the user follows it.
 | "Where should this go?" · "What's a domain?" · "Why does everything need a catalog row?" | `system/conventions.md` |
 | "I've just finished setup — now what?" | `system/learn/first-week.md` |
 | "How do I add a new area?" | `system/learn/adding-a-domain.md` |
+| "Can I bring in what I already told another assistant?" · "How do I move a Claude Project in here?" | `system/learn/importing-context.md` |
 | "What's a skill?" · "Will my skills work elsewhere?" | The limit stated in the `explain` skill — say it in full |
 | "How do I set this up?" | `system/procedures/onboarding.md` |
 

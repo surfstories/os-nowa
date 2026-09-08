@@ -34,7 +34,7 @@ Using something other than Claude Code: replace the last word with `codex`, `cur
   itself opened one file at a time. The agent never reads everything to answer something.
 - **Four loops, running by default.** Knowledge filed by subject and catalogued. Tasks in one file,
   open items only. Projects specced before they are built. Decisions appended, never rewritten.
-- **Seven things to ask for, in ordinary words.** No slash, no menu, no syntax.
+- **Six commands, in ordinary words.** No slash, no menu, no syntax.
 - **Yours to keep.** Plain markdown, local git history as your undo, and nothing addressed to
   another person is sent without you seeing it first.
 
@@ -65,12 +65,12 @@ it is needed. That split is what keeps the folder answerable once it holds a yea
 | "how does this work?" | Explains any part of it, at any moment. |
 | "check my system" | Tells you whether anything has drifted. |
 | "level up" | Turns one weekly chore into something automatic. |
-| "why didn't you find that?" | Fixes the cause of a miss rather than the symptom. |
 | "show me this visually" | Turns what you are looking at into a page in your browser, where you can mark up the part that is wrong and send the note straight back. |
+| "bring in context from another chat" | Carries across what you already told another assistant, or a Claude Project, without retyping it. |
 | "make this a command" | Creates a new one of these. Claude Code only. |
 
 Their short names work too, if you would rather type one word: `onboard`, `explain`, `os-health`,
-`level-up`, `backtrack`, `lavish`, `create-skill`.
+`level-up`, `lavish`, `create-skill`.
 
 ## Why I built this
 
@@ -120,8 +120,8 @@ writes a Claude Code skill file, so it, and anything you create with it, is Clau
 | [`AGENTS.md`](./AGENTS.md) | What the agent reads: the levels, the loops, the hard rules, the routing |
 | [`system/tiers.md`](./system/tiers.md) | Why three levels, and why the always-loaded one stays small |
 | [`system/conventions.md`](./system/conventions.md) | Where a new thing goes, and what a catalog row has to say |
-| [`system/learn/`](./system/learn/) | Walkthroughs: the first week, adding a subject area |
-| [`system/procedures/`](./system/procedures/) | The commands written out. Six of the seven are here; *create-skill* is a skill file only. |
+| [`system/learn/`](./system/learn/) | Walkthroughs: the first week, adding a subject area, bringing in context you already have |
+| [`system/procedures/`](./system/procedures/) | The commands written out. Five of the six are here; *create-skill* is a skill file only. |
 | [`system/maintaining.md`](./system/maintaining.md) | Rules for changing OS-nowa itself |
 | [`CHANGELOG.md`](./CHANGELOG.md) | The version you are on, and what changed in it |
 
