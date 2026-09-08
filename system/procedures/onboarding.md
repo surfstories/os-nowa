@@ -26,7 +26,9 @@ Nothing here needs a terminal, an account, a key or an install.
 4. **Never write to an engine path.** `AGENTS.md` lists them, under "Engine and data"; that list is
    the only one. Onboarding writes to `me/`, to one new domain folder, to `decisions.md`, to
    `tasks.md`, and - only in Step 7b, and only if the user says yes - to a throwaway page under
-   `.lavish/`. Nothing else, ever. Onboarding never deletes anything, so it never creates `_trash/`.
+   `.lavish/`. **If Step 1b brings a paste in, it also writes to `imported/`, and to the areas the
+   filing table on that page names, `projects/` among them.** Nothing else, ever. Onboarding never
+   deletes anything, so it never creates `_trash/`.
    If it seems useful to "adapt the instructions to this user", that is exactly the thing this rule
    forbids: it would make their workspace impossible to update later.
 5. **Never ask for a password, an API key or a token.** None is needed for any of this.

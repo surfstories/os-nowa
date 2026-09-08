@@ -217,8 +217,9 @@ deletes one believing it was part of the product.
 
 **Onboarding never writes to an engine path.** It fills `me/`, creates the user's first domain,
 writes to `decisions.md` and `tasks.md`, and - only in its last step, and only if the user says yes -
-leaves a throwaway page under `.lavish/`. That is all, ever. It never deletes anything, so it never
-creates `_trash/`. The temptation to "adjust `AGENTS.md` to this user" is exactly what this rule
+leaves a throwaway page under `.lavish/`. Where its import step brings a paste in, it also writes to
+`imported/` and to the areas that paste is filed into, `projects/` among them. That is all, ever. It
+never deletes anything, so it never creates `_trash/`. The temptation to "adjust `AGENTS.md` to this user" is exactly what this rule
 forbids: the moment onboarding edits the engine, the user's own work becomes unupdatable. If
 something about the engine seems wrong for a user, that is a note in `decisions.md`, not an edit.
 
