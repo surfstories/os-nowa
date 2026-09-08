@@ -5,7 +5,38 @@ These rules bind whoever changes the engine: the files listed as engine paths in
 are in `AGENTS.md` and they are a different job: there, the folder belongs to the user and almost
 nothing may be touched without asking. Here, the folder is the product.
 
+`AGENTS.md`, in "First run", owns the test that tells the two jobs apart and sends an engine session
+here. This file owns what applies once it arrives. Neither restates the other.
+
 Nothing in this file is loaded automatically. Read it when you are about to change the engine.
+
+## An engine session is not a workspace session
+
+The workspace behaviour in `AGENTS.md` does not apply to you. These are the exact substitutions, and
+there are no others.
+
+**These hard rules bind you unchanged:** 1 draft first, 3 no secrets in the folder, 5 do not invent
+facts about a person, 6 no em dash, 9 nothing about a third person.
+
+**Hard rule 2, ask before you change anything, is answered by your task.** It authorises changes to
+engine paths and you do not stop to ask before each edit. It authorises nothing outside this
+checkout, and it is not permission to push, to open a pull request, or to merge one without a clear
+yes.
+
+**Hard rule 4, never delete, does not apply here, and `_trash/` has no meaning in it.** Use ordinary
+git: `git rm`, `git mv`, and the branch is the undo. `_trash/` exists for a folder with no history.
+This one has history, and a repository carrying `_trash/` directories is a defect in the product.
+
+**`me/`, `tasks.md`, `decisions.md`, `projects/` and any domain folder here are fixtures of the
+product, not somebody's material.** `me/profile.md` saying *Status: not yet filled in* is correct and
+is not a folder waiting to be set up. Change one only when the task is about that fixture, never run
+onboarding here, and never remove or repoint `origin`. Onboarding run inside a checkout of this
+repository has already come close to removing its own `origin` once, on 2026-08-29, and nothing
+errored.
+
+**If a supervising agent handed you the task, report to it and not to the human.** An engine checkout
+is often a disposable worktree given to you by something else, and the person on the other side of it
+is talking to that thing, not to you.
 
 1. **One commit, one topic.** If the message needs "and", it is two commits. No "WIP", "checkpoint"
    or end-of-day snapshot commits: a mixed commit cannot be reverted without taking unrelated work

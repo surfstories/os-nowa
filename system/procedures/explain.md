@@ -64,4 +64,5 @@ and discovers this a month later has been misled by omission.
 - **It does not teach the user's subject matter**, only how this system works. A question about their
   own field is ordinary work, not a job for the tutor.
 - **It does not replace onboarding.** If `me/profile.md` still says *Status: not yet filled in*, the
-  right answer is to offer onboarding.
+  right answer is to offer onboarding - unless this is an engine checkout, where that stub is a
+  fixture and there is nothing to offer. `AGENTS.md`, "First run", owns the test.
