@@ -15,6 +15,14 @@ Newest first. One heading per release, and a release is whatever landed on `main
   filed. It can be run at any time, not only during setup, so context can be brought over in pieces.
   Nothing is automated and nothing is granted access: you move the text yourself, by copy and paste.
 - **The `backtrack` command is removed**, along with its procedure and every row that pointed at it.
+- **The `lavish-axi` pin moved from 0.1.62 to 0.1.67.** Five upstream releases: an agent presence
+  fix across overlapping polls, an attachment upload fix behind a reverse proxy, a tracked-batch
+  pattern in the input playbook, and polls that return instead of hanging when the last review
+  window disconnects. The one substantial release is 0.1.65, which replaced per-tab SSE with one
+  WebSocket and added a reload handoff that migrates tabs opened against an older server and
+  preserves queued feedback across the switch. Nothing touched host binding, `share` or `setup`.
+  Three pinned invocations, the provenance release number and the taken-on date moved; the vendored
+  text below the house rules was deliberately not refreshed.
 
 ## v1.4
 
