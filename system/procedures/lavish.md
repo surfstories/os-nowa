@@ -12,7 +12,7 @@ is wrong" with a mark on the third block.
 ## House rules - read these before anything below them
 
 **Provenance.** Everything from `# Lavish Editor` down is vendored from `kunchenguid/lavish-axi`,
-release **0.1.62**, taken on 2026-08-30. MIT, by Kun Chen. It is upstream text and it is unmodified:
+release **0.1.67**, taken on 2026-09-08. MIT, by Kun Chen. It is upstream text and it is unmodified:
 it is not addressed to this system, and it says `$ARGUMENTS` where a Claude Code skill would take an
 argument. **It no longer carries the workflow**, and that is upstream's own decision: an installed
 copy of a workflow goes stale, so the block below points at the CLI instead of repeating it.
@@ -24,7 +24,7 @@ the version pin, on its five bare `npx` lines. Rules 2 and 7 contradict nothing 
 more, because it no longer mentions `share` or `setup`: they are standing rules about what the CLI
 will tell you once you run it.
 
-1. **Always pin the version: `npx -y lavish-axi@0.1.62`.** Every invocation, with no exception, and
+1. **Always pin the version: `npx -y lavish-axi@0.1.67`.** Every invocation, with no exception, and
    that now includes the three guidance commands the block below introduces: `--help`, `design` and
    `playbook <id>`. The text below writes a bare `npx -y lavish-axi` on five lines and every one of
    them is overridden. Bare means the registry decides what runs today, in a folder holding the
@@ -42,7 +42,7 @@ will tell you once you run it.
 3. **Set the host every time, and check the address that came back.** Put
    `LAVISH_AXI_HOST=127.0.0.1` in front of every `lavish-axi` call, `poll`, `end` and `export`
    included, and never point it anywhere but loopback. In full, a render is
-   `LAVISH_AXI_HOST=127.0.0.1 npx -y lavish-axi@0.1.62 <html-file>`, and every other call takes the
+   `LAVISH_AXI_HOST=127.0.0.1 npx -y lavish-axi@0.1.67 <html-file>`, and every other call takes the
    same prefix. By default the server binds loopback and, when Tailscale is running, this machine's
    Tailscale IPv4 as well; the variable turns that second bind off. It is unauthenticated and it
    serves local files, and this folder holds the user's profile, their decisions and their material.
@@ -56,7 +56,7 @@ will tell you once you run it.
    2. Say in one line what is about to happen: another Lavish server is already running on this
       machine, it is listening beyond this computer, and you are going to stop it. Stopping it ends
       any other Lavish review open here, which is why you say it before you do it.
-   3. Run `LAVISH_AXI_HOST=127.0.0.1 npx -y lavish-axi@0.1.62 stop`, render again with the variable,
+   3. Run `LAVISH_AXI_HOST=127.0.0.1 npx -y lavish-axi@0.1.67 stop`, render again with the variable,
       and confirm the new `url` is loopback.
    4. **Never hand the user a link whose host is not `127.0.0.1`.**
 
