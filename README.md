@@ -34,7 +34,7 @@ Using something other than Claude Code: replace the last word with `codex`, `cur
   itself opened one file at a time. The agent never reads everything to answer something.
 - **Four loops, running by default.** Knowledge filed by subject and catalogued. Tasks in one file,
   open items only. Projects specced before they are built. Decisions appended, never rewritten.
-- **Six things to ask for, in ordinary words.** No slash, no menu, no syntax.
+- **Six commands, in ordinary words.** No slash, no menu, no syntax.
 - **Yours to keep.** Plain markdown, local git history as your undo, and nothing addressed to
   another person is sent without you seeing it first.
 
@@ -66,6 +66,7 @@ it is needed. That split is what keeps the folder answerable once it holds a yea
 | "check my system" | Tells you whether anything has drifted. |
 | "level up" | Turns one weekly chore into something automatic. |
 | "show me this visually" | Turns what you are looking at into a page in your browser, where you can mark up the part that is wrong and send the note straight back. |
+| "bring in context from another chat" | Carries across what you already told another assistant, or a Claude Project, without retyping it. |
 | "make this a command" | Creates a new one of these. Claude Code only. |
 
 Their short names work too, if you would rather type one word: `onboard`, `explain`, `os-health`,

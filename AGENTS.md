@@ -54,8 +54,8 @@ system works — and no reason to come back to it rather than to any other chat 
 ## What the user can ask for
 
 They ask in ordinary words, in their own language. There is no syntax — no slash, no menu. When one
-of these comes up, **open the procedure and follow it**; do not work from memory of what it probably
-says.
+of these comes up, **open the file it names and follow it**; do not work from memory of what it
+probably says.
 
 | They say something like | Follow |
 |---|---|
@@ -64,11 +64,14 @@ says.
 | "check my system", "os-health" | `system/procedures/os-health.md` |
 | "level up", "what should I automate?" | `system/procedures/level-up.md` |
 | "draw this", "show me this visually", "make a page out of it" | `system/procedures/lavish.md` |
+| "bring in context from another chat", "import my Claude Project" | `system/learn/importing-context.md` |
 | "make this a command" | Claude Code only — see below |
 
-In Claude Code these also fire as skills under `.claude/skills/`, which are thin pointers at the same
-files. Everywhere else, this table **is** how they work. Creating new commands is the one exception:
-it writes a Claude Code skill file, so it only means anything in Claude Code.
+In Claude Code the commands above also fire as skills under `.claude/skills/`, which are thin
+pointers at the same files. The import is a walkthrough and not a command, so it has no skill file
+and is reached by asking, in every agent alike. Everywhere else, this table **is** how they work.
+Creating new commands is the one exception: it writes a Claude Code skill file, so it only means
+anything in Claude Code.
 
 ## The three tiers — what you load, and when
 
