@@ -77,7 +77,12 @@ fire and the bar shows what was actually earned — 🏆 still fires at the end.
 
 ## Step 0 — Check whether this has already been done
 
-Read `me/profile.md`.
+First decide you are in a workspace at all, with the remote test in `AGENTS.md` under "First run".
+In an engine checkout this procedure does not run: say so in one line and stop. The stub profile
+there is a fixture of the product, and filling it in dirties tracked files. Step 6c's marker check is
+the last line of defence, not the first.
+
+Then read `me/profile.md`.
 
 - **It says *Status: not yet filled in*** → this is a fresh workspace. Continue to Step 1.
 - **It has a real name in it** → already set up. Do not re-run blindly. Say so, and offer a menu:

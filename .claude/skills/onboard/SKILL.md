@@ -24,6 +24,10 @@ copy in `system/` is the one `AGENTS.md` points every other agent at.
 
 **Do not run it** in the middle of other work just because `me/` looks thin. Offer; wait for a yes.
 
+**Do not run it in an engine checkout of OS-nowa itself.** The stub profile there is a fixture of the
+product. `AGENTS.md`, "First run", owns the test that tells the two apart, and Step 0 of the
+procedure refuses on its own.
+
 ## Verification
 
 The procedure carries its own verification section, at Step 7. Run it from there, and confirm you
