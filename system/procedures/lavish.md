@@ -81,8 +81,8 @@ will tell you once you run it.
    Claude Code, Codex, OpenCode and GitHub Copilot CLI, and `setup plugin`, which registers the
    package as an agent plugin in VS Code, Cursor and Copilot CLI. **Both write outside this folder,
    into the user's agent configuration**, and nothing in OS-nowa may do that. Both subcommands are
-   real and `--help` does not list them, so nothing you can run will warn you they are there. That is
-   why the rule is written down here rather than left to be found.
+   real, and the top-level `--help` an agent reads does not list them; only `setup --help` lists and
+   describes them. That is why the rule is written down here rather than left to be found.
 
 # Lavish Editor
 
