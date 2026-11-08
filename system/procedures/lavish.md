@@ -77,12 +77,12 @@ will tell you once you run it.
    rules deliberately, in the same commit. Rule 12 in `system/maintaining.md` says the same from the
    other side, so it is findable from the engine rules and not only from the file that loses it.
 
-7. **Never run `lavish-axi setup`.** 0.1.62 ships `setup hooks`, which installs session hooks into
+7. **Never run `lavish-axi setup`.** The CLI ships `setup hooks`, which installs session hooks into
    Claude Code, Codex, OpenCode and GitHub Copilot CLI, and `setup plugin`, which registers the
    package as an agent plugin in VS Code, Cursor and Copilot CLI. **Both write outside this folder,
    into the user's agent configuration**, and nothing in OS-nowa may do that. Both subcommands are
-   real and `--help` does not list them, so nothing you can run will warn you they are there. That is
-   why the rule is written down here rather than left to be found.
+   real, and the top-level `--help` an agent reads does not list them; only `setup --help` lists and
+   describes them. That is why the rule is written down here rather than left to be found.
 
 # Lavish Editor
 
